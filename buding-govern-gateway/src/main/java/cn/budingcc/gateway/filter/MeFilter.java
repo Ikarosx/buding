@@ -3,6 +3,7 @@ package cn.budingcc.gateway.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author Ikaros
  * @date 2020/3/25 9:44
  */
+@Slf4j
 @Component
 public class MeFilter extends ZuulFilter {
     @Override
@@ -28,7 +30,8 @@ public class MeFilter extends ZuulFilter {
     public boolean shouldFilter() {
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
-        return StringUtils.equals(request.getRequestURI(), "/ucenter/user/me");
+        log.info(request.getRequestURI());
+        return StringUtils.equals(request.getRequestURI(), "/api/ucenter/user/me");
     }
     
     @Override

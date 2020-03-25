@@ -43,7 +43,8 @@ public class CookieTokenFilter extends ZuulFilter {
     @Override
     public boolean shouldFilter() {
         RequestContext currentContext = RequestContext.getCurrentContext();
-        return currentContext.sendZuulResponse();
+        HttpServletRequest request = currentContext.getRequest();
+        return currentContext.sendZuulResponse() && !StringUtils.startsWithIgnoreCase(request.getRequestURI(), "/oauth");
     }
     
     @Override

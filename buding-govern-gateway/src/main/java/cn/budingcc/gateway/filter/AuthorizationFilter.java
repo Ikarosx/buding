@@ -46,7 +46,7 @@ public class AuthorizationFilter extends ZuulFilter {
                 }
                 context.addZuulRequestHeader("username", tokenInfo.getUser_name());
             } else {
-                if (!StringUtils.startsWithIgnoreCase(request.getRequestURI(), "/api/oauth") && !StringUtils.equals(request.getRequestURI(), "/api/ucenter/school/list") && !StringUtils.equals(request.getRequestURI(), "/api/ucenter/oauth/me")) {
+                if (!StringUtils.startsWithIgnoreCase(request.getRequestURI(), "/api/oauth") && !StringUtils.equals(request.getRequestURI(), "/api/ucenter/school/list") && !StringUtils.equals(request.getRequestURI(), "/api/ucenter/user/me")) {
                     log.error("audit log update fial 401");
                     handlerError(401, context);
                 }
