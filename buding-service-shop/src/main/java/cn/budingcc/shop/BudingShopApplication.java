@@ -1,10 +1,13 @@
 package cn.budingcc.shop;
 
+import cn.budingcc.shop.interceptor.FeignInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * @author Ikaros
@@ -16,8 +19,14 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"cn.budingcc.api"})
 @ComponentScan(basePackages = {"cn.budingcc.framework"})
 @ComponentScan(basePackages = {"cn.budingcc.shop"})
+@EnableResourceServer
 public class BudingShopApplication {
     public static void main(String[] args) {
         SpringApplication.run(BudingShopApplication.class, args);
     }
+    @Bean
+    public FeignInterceptor feignInterceptor() {
+        return new FeignInterceptor();
+    }
+    
 }

@@ -55,3 +55,13 @@ logging:
 buding:
     rabbitmq:
         bd_cms_exchange: bd_cms_exchange
+
+# key uri
+security:
+    oauth2:
+        client:
+            client-id: shopService
+            client-secret: 123456
+        resource:
+            jwt:
+                key-uri: http://oauth.budingcc.cn:40000/oauth/token_key

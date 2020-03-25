@@ -34,3 +34,13 @@ buding:
     rabbitmq:
         goodDetailSiteId: 5e5b782a6128526e1eab8673
         goodDataUrlPrefix: http://budingcc.cn/api/good
+
+# key uri
+security:
+    oauth2:
+        client:
+            client-id: cmsService
+            client-secret: 123456
+        resource:
+            jwt:
+                key-uri: http://oauth.budingcc.cn:40000/oauth/token_key

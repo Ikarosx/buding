@@ -52,3 +52,13 @@ zuul:
             path: /cms/**
             serviceId: buding-service-cms
             strip-prefix: false
+
+# key uri
+security:
+    oauth2:
+        client:
+            client-id: gateway
+            client-secret: 123456
+        resource:
+            jwt:
+                key-uri: http://oauth.budingcc.cn:40000/oauth/token_key

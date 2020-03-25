@@ -23,3 +23,12 @@ eureka:
         ConnectTimeout: 5000 #请求连接的超时时间
         ReadTimeout: 6000 #请求处理的超时时间
 
+# key uri
+security:
+    oauth2:
+        client:
+            client-id: esService
+            client-secret: 123456
+        resource:
+            jwt:
+                key-uri: http://oauth.budingcc.cn:40000/oauth/token_key

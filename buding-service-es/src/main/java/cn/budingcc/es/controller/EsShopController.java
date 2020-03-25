@@ -5,6 +5,7 @@ import cn.budingcc.es.service.EsShopService;
 import cn.budingcc.framework.domain.shop.request.GoodSearchParam;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.ResponseResult;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("es")
+@Slf4j
 public class EsShopController implements EsShopControllerApi {
     @Autowired
     EsShopService esShopService;
