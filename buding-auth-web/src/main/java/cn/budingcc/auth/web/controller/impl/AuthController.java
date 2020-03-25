@@ -70,13 +70,15 @@ public class AuthController implements AuthControllerApi {
         Cookie budingAccessToken = new Cookie("buding_access_token", tokenInfo.getAccess_token());
         budingAccessToken.setMaxAge(tokenInfo.getExpires_in().intValue() - 3);
         budingAccessToken.setDomain("budingcc.cn");
+        budingAccessToken.setHttpOnly(false);
         budingAccessToken.setPath("/");
         response.addCookie(budingAccessToken);
         // 添加refresh_token
         Cookie budingRefreshToken = new Cookie("buding_refresh_token", tokenInfo.getRefresh_token());
-        budingAccessToken.setMaxAge(259200);
-        budingAccessToken.setDomain("budingcc.cn");
-        budingAccessToken.setPath("/");
+        budingRefreshToken.setMaxAge(259200);
+        budingRefreshToken.setDomain("budingcc.cn");
+        budingRefreshToken.setHttpOnly(false);
+        budingRefreshToken.setPath("/");
         response.addCookie(budingRefreshToken);
         try {
             response.sendRedirect(state);

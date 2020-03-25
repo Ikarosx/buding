@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="def2741a-8dd5-4b20-8f7a-37c467e9dcff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/SessionInvalidFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/MeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/MeFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/buding-framework-common/target/" />
@@ -65,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+            <state relative-caret-position="126">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/MeFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="13">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,17 +97,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/OAuthFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="181">
+              <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="147">
+              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/AuthWebApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/AuthorizationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="-99">
               <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
             </state>
           </provider>
@@ -149,17 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/AuthControllerApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="244">
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -300,11 +301,11 @@
         <option value="$PROJECT_DIR$/buding-auth-web/.gitignore" />
         <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/AuthWebApplication.java" />
         <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/SessionTokenFilter.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" />
         <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/AuthControllerApi.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" />
         <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/MeFilter.java" />
         <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/AuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" />
       </list>
     </option>
   </component>
@@ -348,32 +349,81 @@
           <expand>
             <path>
               <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="buding-service-es" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
             <path>
               <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="buding-service-es" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="buding-service-es" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="buding-service-es" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="buding-service-es" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="budingcc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="budingcc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="auth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="budingcc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="auth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cn" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="budingcc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="auth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="filter" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="buding" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="buding-auth-web" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -403,9 +453,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.13175231" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
@@ -552,9 +602,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.GateWayApplication" />
+        <item itemvalue="Spring Boot.BudingAuthApplication" />
         <item itemvalue="Spring Boot.AuthWebApplication" />
         <item itemvalue="Spring Boot.BudingShopApplication" />
-        <item itemvalue="Spring Boot.BudingAuthApplication" />
         <item itemvalue="Spring Boot.BudingUcenterApplication" />
       </list>
     </recent_temporary>
@@ -629,7 +679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585100254369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="buding-auth-web&#10;use token without session.">
+      <created>1585117443886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585117443886</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -665,7 +722,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="722944000" />
+    <option name="totallyTimeSpent" value="725434000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -680,7 +737,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.28217158" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.2546917" />
       <window_info id="Structure" order="1" sideWeight="0.50111854" side_tool="true" weight="0.23659517" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -702,7 +759,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49932975" weight="0.32991204" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49798927" weight="0.33870968" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49731904" visible="true" weight="0.31231672" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49731904" visible="true" weight="0.40762463" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.20576407" />
@@ -919,18 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/AuthWebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -942,13 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -972,16 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -996,34 +1024,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/AuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="-99">
           <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/MeFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="13">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/OAuthFilter.java">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/AuthWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+        <state relative-caret-position="294">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="244">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/OAuthFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

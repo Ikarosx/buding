@@ -72,12 +72,14 @@ public class CookieTokenFilter extends ZuulFilter {
                     Cookie budingAccessToken = new Cookie("buding_access_token", tokenInfo.getAccess_token());
                     budingAccessToken.setMaxAge(tokenInfo.getExpires_in().intValue() - 3);
                     budingAccessToken.setDomain("budingcc.cn");
+                    budingAccessToken.setHttpOnly(false);
                     budingAccessToken.setPath("/");
                     response.addCookie(budingAccessToken);
                     Cookie budingRefreshToken = new Cookie("buding_refresh_token", tokenInfo.getRefresh_token());
-                    budingAccessToken.setMaxAge(259200);
-                    budingAccessToken.setDomain("budingcc.cn");
-                    budingAccessToken.setPath("/");
+                    budingRefreshToken.setMaxAge(259200);
+                    budingRefreshToken.setHttpOnly(false);
+                    budingRefreshToken.setDomain("budingcc.cn");
+                    budingRefreshToken.setPath("/");
                     response.addCookie(budingRefreshToken);
                     currentContext.addZuulRequestHeader("Authorization", "bearer " + tokenInfo.getAccess_token());
                 } catch (Exception e) {
