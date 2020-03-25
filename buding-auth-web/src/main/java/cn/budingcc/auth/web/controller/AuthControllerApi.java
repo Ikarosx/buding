@@ -1,6 +1,5 @@
 package cn.budingcc.auth.web.controller;
 
-import cn.budingcc.auth.web.domain.TokenInfo;
 import cn.budingcc.framework.model.response.ResponseResult;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,5 +14,4 @@ public interface AuthControllerApi {
     
     ResponseResult logout(HttpServletRequest request);
     
-    TokenInfo me(HttpServletRequest request, HttpServletResponse response);
 }

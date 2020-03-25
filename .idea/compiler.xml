@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="buding-service-love" />
+        <module name="buding-service-cms-client" />
+        <module name="buding-service-class" />
+        <module name="buding-govern-center" />
+        <module name="buding-auth-web" />
+        <module name="buding-service-api" />
+        <module name="buding-service-filesystem" />
+        <module name="buding-service-word" />
+        <module name="buding-manager-system" />
+        <module name="buding-service-ucenter" />
+        <module name="buding-framework-common" />
+        <module name="buding-framework-model" />
+        <module name="buding-service-cms" />
+        <module name="buding-framework-util" />
+        <module name="buding-service-ucenter-auth" />
+        <module name="buding-service-socketio" />
+        <module name="buding-service-shop" />
+        <module name="buding-govern-gateway" />
+        <module name="buding-service-es" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="buding-filesystem" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="buding-auth-web" options="-parameters" />
+      <module name="buding-framework-common" options="-parameters" />
+      <module name="buding-framework-model" options="-parameters" />
+      <module name="buding-framework-util" options="-parameters" />
+      <module name="buding-govern-center" options="-parameters" />
+      <module name="buding-govern-gateway" options="-parameters" />
+      <module name="buding-manager-system" options="-parameters" />
+      <module name="buding-service-api" options="-parameters" />
+      <module name="buding-service-class" options="-parameters" />
+      <module name="buding-service-cms" options="-parameters" />
+      <module name="buding-service-cms-client" options="-parameters" />
+      <module name="buding-service-es" options="-parameters" />
+      <module name="buding-service-filesystem" options="-parameters" />
+      <module name="buding-service-love" options="-parameters" />
+      <module name="buding-service-shop" options="-parameters" />
+      <module name="buding-service-socketio" options="-parameters" />
+      <module name="buding-service-ucenter" options="-parameters" />
+      <module name="buding-service-ucenter-auth" options="-parameters" />
+      <module name="buding-service-word" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -45,14 +45,6 @@ public class AuthController implements AuthControllerApi {
     }
     
     @Override
-    @GetMapping("/me")
-    public TokenInfo me(HttpServletRequest request, HttpServletResponse response) {
-        TokenInfo tokenInfo = (TokenInfo) request.getSession().getAttribute("tokenInfo");
-        log.info("me tokeninfo is:" + tokenInfo);
-        return tokenInfo;
-    }
-    
-    @Override
     @GetMapping("/callback")
     public void callback(String code, String state, HttpServletRequest request, HttpServletResponse response) {
         HttpHeaders httpHeaders = new HttpHeaders();
