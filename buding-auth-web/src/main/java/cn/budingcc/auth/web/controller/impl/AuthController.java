@@ -7,6 +7,7 @@ import cn.budingcc.framework.exception.ExceptionCast;
 import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.util.LinkedMultiValueMap;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -32,7 +34,8 @@ public class AuthController implements AuthControllerApi {
     @Value("${buding.auth.serverUrl}")
     private String authServerUrl;
     
-    private RestTemplate restTemplate = new RestTemplate();
+    @Autowired
+    private RestTemplate restTemplate;
     
     @Override
     @PostMapping("/logout")
@@ -70,10 +73,19 @@ public class AuthController implements AuthControllerApi {
         if (responseEntity.getBody() == null) {
             ExceptionCast.cast(AuthExceptionEnum.USER_OR_PASSWORD_ERROR);
         }
-        if (request.getSession() == null) {
-            request.getSession();
-        }
-        request.getSession().setAttribute("tokenInfo", responseEntity.getBody().init());
+        TokenInfo tokenInfo = responseEntity.getBody();
+        // 添加access_token
+        Cookie budingAccessToken = new Cookie("buding_access_token", tokenInfo.getAccess_token());
+        budingAccessToken.setMaxAge(tokenInfo.getExpires_in().intValue() - 3);
+        budingAccessToken.setDomain("budingcc.cn");
+        budingAccessToken.setPath("/");
+        response.addCookie(budingAccessToken);
+        // 添加refresh_token
+        Cookie budingRefreshToken = new Cookie("buding_refresh_token", tokenInfo.getRefresh_token());
+        budingAccessToken.setMaxAge(259200);
+        budingAccessToken.setDomain("budingcc.cn");
+        budingAccessToken.setPath("/");
+        response.addCookie(budingRefreshToken);
         try {
             response.sendRedirect(state);
         } catch (IOException e) {
