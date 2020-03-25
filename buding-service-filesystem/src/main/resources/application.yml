@@ -1,0 +1,47 @@
+server:
+    port: 30000
+spring:
+    application:
+        name: buding-service-filesystem
+    data:
+        mongodb:
+            database: bd_filesystem
+            # uri: mongodb://bd:buding@budingcc.cn:27017/bd_filesystem
+            port: 27017
+            username: bd
+            password: buding
+            host: 127.0.0.1
+
+    #SpringMVC上传文件配置
+    servlet:
+        multipart:
+            #默认支持文件上传.
+            enabled: true
+            #支持文件写入磁盘.
+            file-size-threshold: 0
+            # 上传文件的临时目录
+            location:
+            # 最大支持文件大小
+            max-file-size: 1MB
+            # 最大支持请求大小
+            max-request-size: 30MB
+eureka:
+    instance:
+        instance-id: ${spring.application.name}:${server.port}
+        ip-address: budingcc.cn
+        prefer-ip-address: true
+    client:
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://budingcc.cn:50000/eureka/
+fdfs:
+    # 链接超时
+    connect-timeout: 6000
+    # 读取时间
+    so-timeout: 6000
+    # 生成缩略图参数
+    thumb-image:
+        width: 150
+        height: 150
+    tracker-list: fs.budingcc.cn:22122

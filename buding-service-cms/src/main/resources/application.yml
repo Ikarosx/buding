@@ -1,0 +1,36 @@
+server:
+    port: 31100
+spring:
+    rabbitmq:
+        username: Ikaros
+        password: newLife2016
+        listener:
+            direct:
+                prefetch: 1
+                acknowledge-mode: auto
+    data:
+        mongodb:
+            host: 127.0.0.1
+            username: bd
+            password: buding
+            database: bd_cms
+            port: 27017
+            grid-fs-database: bd_cms
+    application:
+        name: buding-service-cms
+
+eureka:
+    instance:
+        prefer-ip-address: true
+        ip-address: budingcc.cn
+        instance-id: ${spring.application.name}:${server.port}
+    client:
+        service-url:
+            defaultZone:
+                http://budingcc.cn:50000/eureka
+        register-with-eureka: true
+        fetch-registry: true
+buding:
+    rabbitmq:
+        goodDetailSiteId: 5e5b782a6128526e1eab8673
+        goodDataUrlPrefix: http://budingcc.cn/api/good

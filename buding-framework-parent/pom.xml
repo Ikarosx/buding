@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+    </parent>
+    <groupId>cn.budingcc</groupId>
+    <artifactId>buding-framework-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>../buding-framework-model</module>
+        <module>../buding-framework-common</module>
+        <module>../buding-framework-util</module>
+        <module>../buding-service-api</module>
+        <module>../buding-service-shop</module>
+        <module>../buding-service-word</module>
+        <module>../buding-service-love</module>
+        <module>../buding-service-class</module>
+        <module>../buding-service-filesystem</module>
+        <module>../buding-service-es</module>
+        <module>../buding-govern-center</module>
+        <module>../buding-govern-gateway</module>
+        <module>../buding-service-ucenter</module>
+        <module>../buding-service-ucenter-auth</module>
+        <module>../buding-manager-system</module>
+        <module>../buding-service-cms</module>
+        <module>../buding-service-cms-client</module>
+        <module>../buding-service-socketio</module>
+    </modules>
+    <properties>
+        <java.version>1.8</java.version>
+        <tomcat.version>9.0.30</tomcat.version>
+        <!-- 基础构建 -->
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+        <spring-data.version>2.2.2.RELEASE</spring-data.version>
+        <hibernate-core.version>5.4.10.Final</hibernate-core.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <springframework.version>5.0.16.RELEASE</springframework.version>
+        <mybatis-spring-boot.version>2.1.1</mybatis-spring-boot.version>
+        <mybatis.version>3.5.3</mybatis.version>
+        <mysql-connector-java.version>5.1.45</mysql-connector-java.version>
+        <!-- pagehelper -->
+        <pagehelper-spring-boot.version>1.2.12</pagehelper-spring-boot.version>
+        <!-- commons组件 -->
+        <commons-io.version>2.6</commons-io.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
+        <commons-codec.version>1.13</commons-codec.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
+        <!-- lombok -->
+        <lombok.version>1.18.10</lombok.version>
+        <!-- swagger -->
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <!-- fastdfs -->
+        <!--        <fastdfs-client-java.version>1.27.0.0</fastdfs-client-java.version>-->
+        <!-- elasticsearch -->
+        <springframework.version>5.0.5.RELEASE</springframework.version>
+        <!-- <elasticsearch.version>7.1.1</elasticsearch.version>-->
+        <!-- json -->
+        <fastjson.version>1.2.62</fastjson.version>
+        <!-- okhttp组件 -->
+        <okhttp.version>3.14.4</okhttp.version>
+        <feign-okhttp.version>8.18.0</feign-okhttp.version>
+        <!-- 不明 -->
+        <guava.version>24.0-jre</guava.version>
+        <druid.version>1.1.21</druid.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- 基础构建 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <!-- pagehelper -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot.version}</version>
+            </dependency>
+            <!-- commons -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+            <!-- spring-data -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-commons</artifactId>
+                <version>${spring-data.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>${spring-data.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>${spring-data.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate-core.version}</version>
+            </dependency>
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!-- swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <!-- elasticsearch -->
+            
+            
+            <!-- okhttp -->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.feign</groupId>
+                <artifactId>feign-okhttp</artifactId>
+                <version>${feign-okhttp.version}</version>
+            </dependency>
+            
+            <!-- druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <!-- &lt;!&ndash; 资源文件拷贝插件 &ndash;&gt;
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-resources-plugin</artifactId>
+                 <configuration>
+                     <encoding>UTF-8</encoding>
+                 </configuration>
+             </plugin>-->
+            <!-- java编译插件 -->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-compiler-plugin</artifactId>-->
+            <!--                <configuration>-->
+            <!--                    <source>1.8</source>-->
+            <!--                    <target>1.8</target>-->
+            <!--                    <encoding>UTF-8</encoding>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--            </plugin>-->
+        </plugins>
+    </build>
+</project>

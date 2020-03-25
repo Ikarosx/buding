@@ -1,0 +1,43 @@
+server:
+    port: 40000
+    servlet:
+        session:
+            # 3600s
+            timeout: 36000
+spring:
+    datasource:
+        druid:
+            url: ${MYSQL_URL:jdbc:mysql://budingcc.cn:3306/bd_user?characterEncoding=utf-8&useSSL=false}
+            username: buding
+            password: buding2019
+            driverClassName: com.mysql.jdbc.Driver
+            initialSize: 5  #初始建立连接数量
+            minIdle: 5  #最小连接数量
+            maxActive: 20 #最大连接数量
+            maxWait: 10000  #获取连接最大等待时间，毫秒
+            testOnBorrow: true #申请连接时检测连接是否有效
+            testOnReturn: false #归还连接时检测连接是否有效
+            timeBetweenEvictionRunsMillis: 60000 #配置间隔检测连接是否有效的时间（单位是毫秒）
+            minEvictableIdleTimeMillis: 300000  #连接在连接池的最小生存时间（毫秒）
+    application:
+        name: buding-service-ucenter-auth
+    redis:
+        host: ${REDIS_HOST:127.0.0.1}
+        port: ${REDIS_PORT:6379}
+        timeout: 5000 #连接超时 毫秒
+        jedis:
+            pool:
+                maxActive: 3
+                maxIdle: 3
+                minIdle: 1
+                maxWait: -1 #连接池最大等行时间 -1没有限制
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://budingcc.cn:50000/eureka/
+    instance:
+        instance-id: ${spring.application.name}:${server.port}
+        prefer-ip-address: true
+        ip-address: budingcc.cn

@@ -1,0 +1,54 @@
+server:
+    port: 30000
+    servlet:
+        session:
+            cookie:
+                max-age: 36000
+                name: GATEWAYJSESSIONID
+            timeout: 72000
+spring:
+    application:
+        name: buding-service-gateway
+eureka:
+    instance:
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}:${server.port}
+        ip-address: budingcc.cn
+    client:
+        service-url:
+            defaultZone: http://budingcc.cn:50000/eureka
+ribbon:
+    MaxAutoRetries: 2 #最大重试次数，当Eureka中可以找到服务，但是服务连不上时将会重试，如果eureka中找不到服务则直接走断路器
+    MaxAutoRetriesNextServer: 3 #切换实例的重试次数
+    OkToRetryOnAllOperations: false  #对所有操作请求都进行重试，如果是get则可以，如果是post，put等操作没有实现幂等的情况下是很危险的,所以设置为false
+    ConnectTimeout: 5000  #请求连接的超时时间
+    ReadTimeout: 6000 #请求处理的超时时间
+zuul:
+    # prefix是不会带上去微服务的
+    prefix: /api
+    sensitive-headers:
+    routes:
+        buding-service-shop:
+            path: /shop/**
+            serviceId: buding-service-shop
+            strip-prefix: false
+        buding-service-ucenter:
+            path: /ucenter/**
+            serviceId: buding-service-ucenter
+            strip-prefix: false
+        buding-service-ucenter-auth:
+            path: /oauth/**
+            serviceId: buding-service-ucenter-auth
+            strip-prefix: true
+        buding-service-filesystem:
+            path: /filesystem/**
+            serviceId: buding-service-filesystem
+            strip-prefix: false
+        buding-service-es:
+            path: /es/**
+            serviceId: buding-service-es
+            strip-prefix: false
+        buding-service-cms:
+            path: /cms/**
+            serviceId: buding-service-cms
+            strip-prefix: false

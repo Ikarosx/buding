@@ -1,0 +1,26 @@
+server:
+    port: 40010
+    servlet:
+        session:
+            cookie:
+                max-age: 36000
+                name: AUTHWEBJSESSIONID
+            timeout: 36000
+
+spring:
+    application:
+        name: buding-auth-web
+buding:
+    auth:
+        serverUrl: http://oauth.budingcc.cn:40000
+zuul:
+    routes:
+        api:
+            path: /api/**
+            url: http://gateway.budingcc.cn:30000
+            strip-prefix: false
+        oauth:
+            path: /oauth/**
+            url: forward:/oauth
+            strip-prefix: true
+    sensitive-headers:
