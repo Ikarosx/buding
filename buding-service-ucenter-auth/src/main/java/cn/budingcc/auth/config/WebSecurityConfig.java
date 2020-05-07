@@ -1,6 +1,7 @@
 package cn.budingcc.auth.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,6 +23,7 @@ import org.springframework.security.web.authentication.logout.LogoutSuccessHandl
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     
+    @Qualifier("UserDetailServiceImpl")
     @Autowired
     private UserDetailsService userDetailsService;
     @Autowired
@@ -39,7 +41,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // TODO
         http.csrf().disable().httpBasic().and().formLogin().and().logout().logoutSuccessHandler(logoutSuccessHandler).and().authorizeRequests().anyRequest().authenticated();
     }
     

@@ -13,7 +13,10 @@ public enum AuthExceptionEnum implements ResultCode {
      * 30000
      */
     USER_OR_PASSWORD_ERROR(false, 30001, "用户名或密码错误"),
-    NOT_LOGIN(false, 30002, "当前未登录");
+    LOGIN_RETRY(false, 30002, "请重新登陆"),
+    FRESH_FAIL(false, 30003, "刷新令牌失败"),
+    SAVE_TOKEN_TO_REDIS_FAIL(false, 30004, "保存token到redis失败"),
+    GET_TOKEN_BY_JIT_FAIL(false, 30005, "通过JIT获取token失败");
     private boolean success;
     private int code;
     private String message;

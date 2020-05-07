@@ -2,6 +2,8 @@ server:
     port: 31001
     servlet:
         context-path: /shop
+    tomcat:
+        max-threads: 200
 spring:
     application:
         name: buding-service-shop

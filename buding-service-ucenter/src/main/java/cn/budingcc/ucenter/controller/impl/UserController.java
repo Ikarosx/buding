@@ -29,19 +29,19 @@ public class UserController implements UserControllerApi {
     UserService userService;
     
     @Override
-    @GetMapping("user/userExtension")
-    public BdUserExtension getUserExtension(@RequestParam String userName) {
-        return userService.getUserExtension(userName);
+    @GetMapping("/user/userExtension")
+    public BdUserExtension getUserExtension(@RequestParam String username) {
+        return userService.getUserExtension(username);
     }
     
     @Override
-    @GetMapping("user")
+    @GetMapping("/user")
     public BdUser getUserByUserName(@RequestParam @NotBlank String name) {
         return userService.getUserByUserName(name);
     }
     
     @Override
-    @GetMapping("user/list/{page}/{size}")
+    @GetMapping("/user/list/{page}/{size}")
     public QueryResponseResult listUsersByPage(@PathVariable int page, @PathVariable int size, UserListRequest userListRequest) {
         if (page < 0) {
             page = 0;

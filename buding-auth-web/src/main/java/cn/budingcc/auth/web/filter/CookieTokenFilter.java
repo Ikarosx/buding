@@ -1,6 +1,10 @@
 package cn.budingcc.auth.web.filter;
 
 import cn.budingcc.auth.web.domain.TokenInfo;
+import cn.budingcc.auth.web.exception.AuthExceptionEnum;
+import cn.budingcc.auth.web.service.CookieService;
+import cn.budingcc.framework.model.response.ResponseResult;
+import com.alibaba.fastjson.JSON;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -9,7 +13,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
-import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
@@ -22,11 +25,13 @@ import javax.servlet.http.HttpServletResponse;
  * @author Ikaros
  * @date 2020/3/25 9:14
  */
-@Component
+// @Component
 @Slf4j
 public class CookieTokenFilter extends ZuulFilter {
     @Autowired
     RestTemplate restTemplate;
+    @Autowired
+    private CookieService cookieService;
     @Value("${buding.auth.serverUrl}")
     private String authServerUrl;
     
@@ -69,31 +74,27 @@ public class CookieTokenFilter extends ZuulFilter {
                 try {
                     responseEntity = restTemplate.exchange(authServerUrl + "/oauth/token", HttpMethod.POST, httpEntity, TokenInfo.class);
                     TokenInfo tokenInfo = responseEntity.getBody();
-                    Cookie budingAccessToken = new Cookie("buding_access_token", tokenInfo.getAccess_token());
-                    budingAccessToken.setMaxAge(tokenInfo.getExpires_in().intValue() - 3);
-                    budingAccessToken.setDomain("budingcc.cn");
-                    budingAccessToken.setHttpOnly(false);
-                    budingAccessToken.setPath("/");
-                    response.addCookie(budingAccessToken);
-                    Cookie budingRefreshToken = new Cookie("buding_refresh_token", tokenInfo.getRefresh_token());
-                    budingRefreshToken.setMaxAge(259200);
-                    budingRefreshToken.setHttpOnly(false);
-                    budingRefreshToken.setDomain("budingcc.cn");
-                    budingRefreshToken.setPath("/");
-                    response.addCookie(budingRefreshToken);
+                    // cookie
                     currentContext.addZuulRequestHeader("Authorization", "bearer " + tokenInfo.getAccess_token());
                 } catch (Exception e) {
-                    currentContext.setSendZuulResponse(false);
-                    currentContext.setResponseBody("{\"success\":false,\"code\":40001, \"message\":\"refresh fail\"}");
-                    currentContext.getResponse().setContentType("application/json");
+                    refreshFail();
                 }
             } else {
-                currentContext.setSendZuulResponse(false);
-                currentContext.setResponseBody("{\"success\":false,\"code\":40001, \"message\":\"refresh fail\"}");
-                currentContext.getResponse().setContentType("application/json");
+                refreshFail();
             }
         }
         return null;
+    }
+    
+    public void refreshFail() {
+        RequestContext currentContext = RequestContext.getCurrentContext();
+        currentContext.setResponseStatusCode(200);
+        currentContext.setSendZuulResponse(false);
+        ResponseResult responseResult = new ResponseResult(AuthExceptionEnum.LOGIN_RETRY);
+        String s = JSON.toJSONString(responseResult);
+        HttpServletResponse response = currentContext.getResponse();
+        response.setContentType("application/json");
+        currentContext.setResponseBody(s);
     }
     
     private String getCookie(String cookieName) {

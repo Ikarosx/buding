@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * @author Ikaros
@@ -21,8 +19,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @ComponentScan(basePackages = "cn.budingcc.es")
 @ComponentScan(basePackages = "cn.budingcc.framework")
 @EnableElasticsearchRepositories(basePackages = "cn.budingcc.es.dao")
-@EnableResourceServer
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+// @EnableResourceServer
+// @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ESApplication {
     public static void main(String[] args) {
         SpringApplication.run(ESApplication.class, args);

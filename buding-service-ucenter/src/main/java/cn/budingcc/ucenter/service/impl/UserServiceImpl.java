@@ -12,6 +12,7 @@ import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.QueryResult;
 import cn.budingcc.framework.model.response.ResponseResult;
+import cn.budingcc.ucenter.dao.BdMenuRepository;
 import cn.budingcc.ucenter.dao.BdUserMapper;
 import cn.budingcc.ucenter.dao.BdUserRepository;
 import cn.budingcc.ucenter.dao.BdUserRoleRepository;
@@ -34,19 +35,21 @@ import java.util.Optional;
 @Service("UserService")
 public class UserServiceImpl implements UserService {
     @Autowired
-    BdUserRepository bdUserRepository;
+    private BdUserRepository bdUserRepository;
     @Autowired
-    BdUserMapper bdUserMapper;
+    private BdUserMapper bdUserMapper;
     @Autowired
-    BdUserRoleRepository bdUserRoleRepository;
+    private BdUserRoleRepository bdUserRoleRepository;
+    @Autowired
+    private BdMenuRepository bdMenuRepository;
     
     @Override
-    public BdUserExtension getUserExtension(String userId) {
-        BdUser user = findByUserId(userId);
+    public BdUserExtension getUserExtension(String username) {
+        BdUser user = getUserByUserName(username);
         if (user == null) {
             return null;
         }
-        List<BdMenu> bdMenuList = bdUserRepository.selectPermissionByUserId(userId);
+        List<BdMenu> bdMenuList = bdMenuRepository.selectPermissionByUserId(user.getId());
         BdUserExtension bdUserExtension = new BdUserExtension();
         // 用户权限
         BeanUtils.copyProperties(user, bdUserExtension);
@@ -56,7 +59,7 @@ public class UserServiceImpl implements UserService {
     
     @Override
     public QueryResponseResult listUsersByPage(int page, int size, UserListRequest userListRequest) {
-        PageHelper.startPage(page,size );
+        PageHelper.startPage(page, size);
         Page<BdUserRoleExtension> bdUserRoleExtensions = bdUserMapper.listUsersByPage(page, size, userListRequest);
         QueryResult<BdUserRoleExtension> queryResult = new QueryResult<>();
         queryResult.setList(bdUserRoleExtensions.getResult());

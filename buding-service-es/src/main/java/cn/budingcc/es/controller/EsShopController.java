@@ -23,6 +23,7 @@ public class EsShopController implements EsShopControllerApi {
     @Override
     @GetMapping("good/list/{page}/{size}")
     public QueryResponseResult listGoods(@PathVariable int page, @PathVariable int size, GoodSearchParam goodSearchParam) {
+        
         if (page <= 0) {
             page = 1;
         }

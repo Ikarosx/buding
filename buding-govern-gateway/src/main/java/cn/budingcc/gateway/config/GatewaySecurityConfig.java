@@ -1,5 +1,6 @@
 package cn.budingcc.gateway.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -13,9 +14,12 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 @Configuration
 @EnableResourceServer
 public class GatewaySecurityConfig extends ResourceServerConfigurerAdapter {
+    @Autowired
+    private GateWayWebSecurityExpressionHandler gateWayWebSecurityExpressionHandler;
+    
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        super.configure(resources);
+        resources.expressionHandler(gateWayWebSecurityExpressionHandler);
     }
     
     @Override
@@ -23,6 +27,8 @@ public class GatewaySecurityConfig extends ResourceServerConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/oauth/**")
                 .permitAll()
-                .anyRequest().authenticated();
+                .anyRequest()
+                // .authenticated();
+                .access("#permissionService.hasPermission(request, authentication)");
     }
 }

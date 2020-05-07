@@ -2,7 +2,11 @@ package cn.budingcc.auth.web.controller.impl;
 
 import cn.budingcc.auth.web.controller.AuthControllerApi;
 import cn.budingcc.auth.web.domain.TokenInfo;
+import cn.budingcc.auth.web.domain.response.JwtResponse;
 import cn.budingcc.auth.web.exception.AuthExceptionEnum;
+import cn.budingcc.auth.web.service.CookieService;
+import cn.budingcc.auth.web.service.TokenService;
+import cn.budingcc.auth.web.util.CookieUtil;
 import cn.budingcc.framework.exception.ExceptionCast;
 import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.ResponseResult;
@@ -18,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -33,20 +36,38 @@ import java.io.IOException;
 public class AuthController implements AuthControllerApi {
     @Value("${buding.auth.serverUrl}")
     private String authServerUrl;
-    
+    @Autowired
+    private TokenService tokenService;
+    @Autowired
+    private CookieService cookieService;
     @Autowired
     private RestTemplate restTemplate;
     
     @Override
     @PostMapping("/logout")
     public ResponseResult logout(HttpServletRequest request) {
+        // TODO
         request.getSession().invalidate();
         return new ResponseResult(CommonCodeEnum.SUCCESS);
     }
     
     @Override
+    @GetMapping("/jwt")
+    public JwtResponse jwt() {
+        // 获取cookie中的jit
+        String jit = tokenService.getJitFromCookie();
+        // 根据jit从redis中查询jwt
+        TokenInfo tokenInfo = tokenService.getTokenByJit(jit);
+        if (tokenInfo == null) {
+            return new JwtResponse(AuthExceptionEnum.GET_TOKEN_BY_JIT_FAIL, null);
+        }
+        return new JwtResponse(CommonCodeEnum.SUCCESS, tokenInfo.getAccess_token());
+    }
+    
+    @Override
     @GetMapping("/callback")
     public void callback(String code, String state, HttpServletRequest request, HttpServletResponse response) {
+        // 构造请求头和请求体获取令牌
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         httpHeaders.setBasicAuth("webBuding", "123456");
@@ -59,27 +80,20 @@ public class AuthController implements AuthControllerApi {
         try {
             responseEntity = restTemplate.exchange(authServerUrl + "/oauth/token", HttpMethod.POST, httpEntity, TokenInfo.class);
         } catch (Exception e) {
-            log.error(e.getMessage(), e);
             ExceptionCast.cast(AuthExceptionEnum.USER_OR_PASSWORD_ERROR);
         }
         if (responseEntity.getBody() == null) {
             ExceptionCast.cast(AuthExceptionEnum.USER_OR_PASSWORD_ERROR);
         }
+        // 得到令牌
         TokenInfo tokenInfo = responseEntity.getBody();
-        // 添加access_token
-        Cookie budingAccessToken = new Cookie("buding_access_token", tokenInfo.getAccess_token());
-        budingAccessToken.setMaxAge(tokenInfo.getExpires_in().intValue() - 3);
-        budingAccessToken.setDomain("budingcc.cn");
-        budingAccessToken.setHttpOnly(false);
-        budingAccessToken.setPath("/");
-        response.addCookie(budingAccessToken);
-        // 添加refresh_token
-        Cookie budingRefreshToken = new Cookie("buding_refresh_token", tokenInfo.getRefresh_token());
-        budingRefreshToken.setMaxAge(259200);
-        budingRefreshToken.setDomain("budingcc.cn");
-        budingRefreshToken.setHttpOnly(false);
-        budingRefreshToken.setPath("/");
-        response.addCookie(budingRefreshToken);
+        // 保存令牌到redis
+        boolean saveTokenSuccess = tokenService.saveTokenToRedis(tokenInfo);
+        if (!saveTokenSuccess) {
+            ExceptionCast.cast(AuthExceptionEnum.SAVE_TOKEN_TO_REDIS_FAIL);
+        }
+        // 添加cookie到response
+        CookieUtil.addCookie(response, "budingcc.cn", "/", "jit", tokenInfo.getJit(), 7200, false);
         try {
             response.sendRedirect(state);
         } catch (IOException e) {

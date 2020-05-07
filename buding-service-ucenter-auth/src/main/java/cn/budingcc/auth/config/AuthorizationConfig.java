@@ -15,7 +15,6 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
-import org.springframework.session.jdbc.config.annotation.web.http.EnableJdbcHttpSession;
 
 import javax.sql.DataSource;
 
@@ -25,7 +24,6 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableAuthorizationServer
-@EnableJdbcHttpSession
 public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
     
     @Autowired
@@ -44,9 +42,8 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
     public JwtAccessTokenConverter jwtTokenEnhancer() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         // converter.setSigningKey("buding2019");
-        KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("buding.key"), "newLife2016".toCharArray());
-        converter.setKeyPair(keyStoreKeyFactory.getKeyPair("Ikaros"));
-        
+        KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("keystore"), "buding2019".toCharArray());
+        converter.setKeyPair(keyStoreKeyFactory.getKeyPair("bdkey"));
         return converter;
     }
     

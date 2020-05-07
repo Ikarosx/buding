@@ -4,10 +4,12 @@ server:
         session:
             cookie:
                 max-age: 3600
+    tomcat:
+        max-threads: 1000
 spring:
     datasource:
         druid:
-            url: jdbc:mysql://budingcc.cn:3306/bd_user?characterEncoding=utf-8
+            url: jdbc:mysql://budingcc.cn:3306/bd_user?characterEncoding=utf-8&useSSL=false
             username: buding
             password: buding2019
             driverClassName: com.mysql.jdbc.Driver

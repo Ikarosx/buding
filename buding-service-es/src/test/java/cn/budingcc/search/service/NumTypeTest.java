@@ -9,7 +9,5 @@ import org.junit.Test;
 public class NumTypeTest {
     @Test
     public void test() {
-        Long integer = new Long(20);
-        Double x = Double.valueOf(integer.toString());
     }
 }

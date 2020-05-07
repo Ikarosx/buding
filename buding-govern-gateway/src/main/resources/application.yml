@@ -62,3 +62,6 @@ security:
         resource:
             jwt:
                 key-uri: http://oauth.budingcc.cn:40000/oauth/token_key
+logging:
+    pattern:
+        console:

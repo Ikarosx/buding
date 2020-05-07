@@ -1,5 +1,6 @@
 package cn.budingcc.auth.web.controller;
 
+import cn.budingcc.auth.web.domain.response.JwtResponse;
 import cn.budingcc.framework.model.response.ResponseResult;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,4 +15,5 @@ public interface AuthControllerApi {
     
     ResponseResult logout(HttpServletRequest request);
     
+    JwtResponse jwt();
 }
