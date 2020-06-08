@@ -1,6 +1,6 @@
-package cn.budingcc.auth.web.service;
+package cn.budingcc.gateway.service;
 
-import cn.budingcc.auth.web.domain.TokenInfo;
+import cn.budingcc.gateway.domain.TokenInfo;
 
 /**
  * @author Ikaros

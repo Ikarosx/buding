@@ -122,7 +122,6 @@ public class GoodServiceImpl implements GoodService {
         queryResult.setList(goodPage.getContent());
         return new QueryResponseResult(CommonCodeEnum.SUCCESS, queryResult);
     }
-    
     @Override
     @Transactional(rollbackFor = Exception.class)
     public ResponseResult deleteGoods(String ids) {

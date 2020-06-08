@@ -1,4 +1,4 @@
-package cn.budingcc.auth.web.domain;
+package cn.budingcc.gateway.domain;
 
 import lombok.Data;
 

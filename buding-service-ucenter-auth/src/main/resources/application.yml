@@ -2,8 +2,8 @@ server:
     port: 40000
     servlet:
         session:
-            # 3600s
-            timeout: 36000
+            cookie:
+                max-age: 7200
 spring:
     datasource:
         druid:
@@ -21,6 +21,9 @@ spring:
             minEvictableIdleTimeMillis: 300000  #连接在连接池的最小生存时间（毫秒）
     application:
         name: buding-service-ucenter-auth
+    redis:
+        host: 127.0.0.1
+        port: 6379
 eureka:
     client:
         fetch-registry: true

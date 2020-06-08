@@ -9,6 +9,7 @@ import cn.budingcc.framework.model.response.ResponseResult;
 import cn.budingcc.shop.service.CategoryService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.regex.Pattern;
@@ -22,7 +23,7 @@ import java.util.regex.Pattern;
 public class CategoryController implements CategoryControllerApi {
     
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
     
     @Override
     @PostMapping
@@ -33,11 +34,11 @@ public class CategoryController implements CategoryControllerApi {
     
     private void categoryInsertValidate(@RequestBody Category category) {
         Boolean leaf = category.getLeaf();
-        if (leaf == null){
+        if (leaf == null) {
             ExceptionCast.cast(CommonCodeEnum.INVALID_PARAM);
         }
         Boolean show = category.getShow();
-        if (show == null){
+        if (show == null) {
             ExceptionCast.cast(CommonCodeEnum.INVALID_PARAM);
         }
         String name = category.getName();

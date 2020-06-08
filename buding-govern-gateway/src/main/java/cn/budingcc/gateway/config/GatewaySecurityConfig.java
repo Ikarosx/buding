@@ -24,10 +24,7 @@ public class GatewaySecurityConfig extends ResourceServerConfigurerAdapter {
     
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/oauth/**")
-                .permitAll()
-                .anyRequest()
+        http.authorizeRequests().antMatchers("/oauth/**").permitAll().anyRequest()
                 // .authenticated();
                 .access("#permissionService.hasPermission(request, authentication)");
     }

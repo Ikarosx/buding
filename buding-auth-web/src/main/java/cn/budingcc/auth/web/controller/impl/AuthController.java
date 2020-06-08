@@ -4,7 +4,6 @@ import cn.budingcc.auth.web.controller.AuthControllerApi;
 import cn.budingcc.auth.web.domain.TokenInfo;
 import cn.budingcc.auth.web.domain.response.JwtResponse;
 import cn.budingcc.auth.web.exception.AuthExceptionEnum;
-import cn.budingcc.auth.web.service.CookieService;
 import cn.budingcc.auth.web.service.TokenService;
 import cn.budingcc.auth.web.util.CookieUtil;
 import cn.budingcc.framework.exception.ExceptionCast;
@@ -39,25 +38,23 @@ public class AuthController implements AuthControllerApi {
     @Autowired
     private TokenService tokenService;
     @Autowired
-    private CookieService cookieService;
-    @Autowired
     private RestTemplate restTemplate;
     
     @Override
     @PostMapping("/logout")
     public ResponseResult logout(HttpServletRequest request) {
-        // TODO
         request.getSession().invalidate();
+        tokenService.deleteToken(tokenService.getJitFromCookie());
         return new ResponseResult(CommonCodeEnum.SUCCESS);
     }
     
     @Override
     @GetMapping("/jwt")
     public JwtResponse jwt() {
-        // 获取cookie中的jit
-        String jit = tokenService.getJitFromCookie();
-        // 根据jit从redis中查询jwt
-        TokenInfo tokenInfo = tokenService.getTokenByJit(jit);
+        // 获取cookie中的jti
+        String jti = tokenService.getJitFromCookie();
+        // 根据jti从redis中查询jwt
+        TokenInfo tokenInfo = tokenService.getTokenByJit(jti);
         if (tokenInfo == null) {
             return new JwtResponse(AuthExceptionEnum.GET_TOKEN_BY_JIT_FAIL, null);
         }
@@ -93,7 +90,7 @@ public class AuthController implements AuthControllerApi {
             ExceptionCast.cast(AuthExceptionEnum.SAVE_TOKEN_TO_REDIS_FAIL);
         }
         // 添加cookie到response
-        CookieUtil.addCookie(response, "budingcc.cn", "/", "jit", tokenInfo.getJit(), 7200, false);
+        CookieUtil.addCookie(response, "budingcc.cn", "/", "jti", tokenInfo.getJti(), 3600, true);
         try {
             response.sendRedirect(state);
         } catch (IOException e) {

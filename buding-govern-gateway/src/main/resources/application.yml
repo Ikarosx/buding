@@ -39,7 +39,7 @@ zuul:
         buding-service-ucenter-auth:
             path: /oauth/**
             serviceId: buding-service-ucenter-auth
-            strip-prefix: true
+            strip-prefix: false
         buding-service-filesystem:
             path: /filesystem/**
             serviceId: buding-service-filesystem

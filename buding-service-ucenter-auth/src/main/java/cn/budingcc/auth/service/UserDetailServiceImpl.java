@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.oauth2.provider.ClientDetails;
 import org.springframework.security.oauth2.provider.ClientDetailsService;
+import org.springframework.security.oauth2.provider.NoSuchClientException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import java.util.List;
 @Service("UserDetailServiceImpl")
 public class UserDetailServiceImpl implements UserDetailsService {
     @Autowired
-    ClientDetailsService clientDetailsService;
+    private ClientDetailsService clientDetailsService;
     @Autowired
     private UserClient userClient;
     
@@ -36,7 +37,12 @@ public class UserDetailServiceImpl implements UserDetailsService {
         // 取出身份，如果身份为空说明没有认证
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null) {
-            ClientDetails clientDetails = clientDetailsService.loadClientByClientId(username);
+            ClientDetails clientDetails = null;
+            try {
+                clientDetails = clientDetailsService.loadClientByClientId(username);
+            } catch (NoSuchClientException e) {
+                // do nothing
+            }
             if (clientDetails != null) {
                 String clientSecret = clientDetails.getClientSecret();
                 return new User(username, clientSecret, clientDetails.getAuthorities());

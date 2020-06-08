@@ -23,4 +23,6 @@ public class BdUser extends User {
     public BdUser(String username, String password, Collection<? extends GrantedAuthority> authorities) {
         super(username, password, authorities);
     }
+    
+    
 }

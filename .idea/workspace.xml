@@ -2,43 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="def2741a-8dd5-4b20-8f7a-37c467e9dcff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/buding-service-ucenter/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buding-service-ucenter/src/test/java/cn/ikarosx/spring/SpringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-auth-web/src/test/java/aop/AopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/domain/TokenInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/exception/AuthExceptionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/TokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/impl/TokenServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/util/CookieUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/JWTTokenEnhancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/org/springframework/security/web/authentication/ui/DefaultLoginPageGeneratingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-auth-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/AuthControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/AuthControllerApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/domain/TokenInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/domain/TokenInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/exception/AuthExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/exception/AuthExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CookieTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/CookieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/CookieServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-govern-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-govern-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/config/GatewaySecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/config/GatewaySecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-govern-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-govern-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-govern-gateway/src/main/resources/buding.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-es/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-es/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-es/src/main/java/cn/budingcc/es/ESApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-es/src/main/java/cn/budingcc/es/ESApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-es/src/main/java/cn/budingcc/es/controller/EsShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-es/src/main/java/cn/budingcc/es/controller/EsShopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-es/src/main/resources/buding.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-es/src/test/java/cn/budingcc/search/service/NumTypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-es/src/test/java/cn/budingcc/search/service/NumTypeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-service-shop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-shop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/BudingShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/BudingShopApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/service/impl/GoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/service/impl/GoodServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-service-shop/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-shop/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-shop/src/main/resources/buding.key" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/BudingAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/BudingAuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/UserDetailServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/dao/BdUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationServerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/service/UserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/service/UserDetailServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/resources/buding.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/controller/impl/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/controller/impl/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/dao/BdUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/dao/BdUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buding-service-ucenter/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buding-service-ucenter/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/buding-framework-common/target/" />
@@ -100,90 +96,96 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/test/java/cn/ikarosx/spring/SpringTest.java">
+        <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/TokenServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+            <state relative-caret-position="223">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/buding-auth-web/src/test/java/aop/AopTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/resources/beans.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/controller/FileSystemController.java">
+        <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            <state relative-caret-position="-273">
+              <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/service/FileSystemService.java">
+        <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/AuthWebApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="160">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/service/impl/FileSystemServiceImpl.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.2.RELEASE/spring-boot-autoconfigure-2.2.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="160">
+              <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/filesystem/response/UploadFileResult.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/context/annotation/ComponentScan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="105">
+              <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/filesystem/FileSystem.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="97">
+              <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-filesystem/pom.xml">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/stereotype/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="118">
+              <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/dao/FileSystemRepository.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/stereotype/Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="307">
+              <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/util/FileDfsUtil.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/stereotype/Indexed.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="251">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -202,18 +204,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>request.getSession</find>
-      <find>request.getSession\(false\)</find>
-      <find>filter</find>
-      <find>gateway\.</find>
-      <find>authorization</find>
-      <find>authorization1</find>
-      <find>authori</find>
-      <find>ikaros</find>
-      <find>= -</find>
-      <find>123456</find>
-      <find>RestTemplate = new</find>
-      <find>RestTemplate</find>
       <find>auth.bu</find>
       <find>feign</find>
       <find>------</find>
@@ -231,7 +221,19 @@
       <find>fileupload</find>
       <find>doFilter</find>
       <find>restTemplate.exchange</find>
+      <find>matcher</find>
+      <find>withmatcher</find>
+      <find>@RequestBody</find>
+      <find>cors</find>
+      <find>GetMapp</find>
+      <find>40010</find>
+      <find>SpringSession</find>
       <find>session</find>
+      <find>resourceServer</find>
+      <find>tokenStore</find>
+      <find>tokenService</find>
+      <find>jit</find>
+      <find>shop</find>
     </findStrings>
     <replaceStrings>
       <replace>c.</replace>
@@ -255,6 +257,7 @@
       <replace>request.getSession\(\)</replace>
       <replace />
       <replace>white</replace>
+      <replace>jti</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-service-ucenter</dir>
@@ -279,57 +282,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationConfig.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/buding-auth-web/pom.xml" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/test/java/cn/budingcc/auth/RedisTest.java" />
-        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/impl/PermissionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/client/UserClient.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/BudingAuthApplication.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/ucenter/BdUser.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUser.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUserJwt.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/controller/impl/UserController.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/dao/BdUserRepository.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter/src/test/java/cn/budingcc/ucenter/service/impl/PermissionTest.java" />
-        <option value="$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/ucenter/BdMenu.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/dao/BdMenuRepository.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/LogFilter.java" />
-        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/domain/response/JwtResponse.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/AuthControllerApi.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/TokenService.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/exception/AuthExceptionEnum.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/util/CookieUtil.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/CookieServiceImpl.java" />
         <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/CookieService.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/domain/TokenInfo.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" />
         <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java" />
-        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/TokenServiceImpl.java" />
         <option value="$PROJECT_DIR$/buding-service-es/src/main/java/cn/budingcc/es/controller/EsShopController.java" />
         <option value="$PROJECT_DIR$/buding-service-es/pom.xml" />
-        <option value="$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/buding-service-shop/pom.xml" />
         <option value="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/BudingShopApplication.java" />
-        <option value="$PROJECT_DIR$/buding-service-shop/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/buding-service-es/src/main/java/cn/budingcc/es/ESApplication.java" />
         <option value="$PROJECT_DIR$/buding-service-ucenter/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/dao/CategoryMapper.java" />
         <option value="$PROJECT_DIR$/buding-framework-parent/pom.xml" />
         <option value="$PROJECT_DIR$/buding-service-es/src/test/java/cn/budingcc/search/service/NumTypeTest.java" />
         <option value="$PROJECT_DIR$/buding-service-api/src/main/java/cn/budingcc/api/config/Swagger2Configuration.java" />
-        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/service/UserDetailServiceImpl.java" />
         <option value="$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/Data.java" />
         <option value="$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/QueryResult.java" />
         <option value="$PROJECT_DIR$/buding-govern-gateway/src/test/java/cn/ikarosx/spring/SpringTest.java" />
         <option value="$PROJECT_DIR$/buding-service-ucenter/src/test/java/cn/ikarosx/spring/SpringTest.java" />
         <option value="$PROJECT_DIR$/buding-service-ucenter/src/main/resources/beans.xml" />
+        <option value="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/service/impl/GoodServiceImpl.java" />
+        <option value="$PROJECT_DIR$/buding-service-es/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/domain/TokenInfo.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationConfig.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUser.java" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/org/springframework/security/web/authentication/ui/DefaultLoginPageGeneratingFilter.java" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/util/CookieUtil.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/CookieService.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/exception/AuthExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/domain/TokenInfo.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/TokenService.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/util/CookieUtil.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/TokenServiceImpl.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CookieTokenFilter.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/impl/TokenServiceImpl.java" />
+        <option value="$PROJECT_DIR$/buding-service-shop/pom.xml" />
+        <option value="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/service/UserDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/config/GatewaySecurityConfig.java" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/impl/PermissionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/buding-service-api/src/main/java/cn/budingcc/api/shop/CategoryControllerApi.java" />
+        <option value="$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/buding-service-shop/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CorsFilter.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/CustomerAccessTokenConverter.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/JWTTokenEnhancer.java" />
+        <option value="$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationServerConfig.java" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java" />
+        <option value="$PROJECT_DIR$/buding-auth-web/src/test/java/aop/AopTest.java" />
       </list>
     </option>
   </component>
@@ -353,7 +356,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="405" />
     <option name="y" value="275" />
     <option name="width" value="850" />
@@ -370,42 +373,134 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="buding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buding-service-ucenter" type="462c0819:PsiDirectoryNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="buding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buding-service-ucenter" type="462c0819:PsiDirectoryNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="buding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buding-service-ucenter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buding-service-ucenter" type="462c0819:PsiDirectoryNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="buding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buding-service-ucenter" type="462c0819:PsiDirectoryNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="budingcc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="budingcc" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="budingcc" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="budingcc" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="budingcc" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aop" type="462c0819:PsiDirectoryNode" />
+              <item name="AopTest.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="buding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buding-auth-web" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -467,7 +562,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/buding-govern-gateway/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -477,29 +572,29 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="cn.budingcc.auth.config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.budingcc.gateway.util" />
+      <recent name="cn.budingcc.gateway.domain" />
+      <recent name="cn.budingcc.gateway.exception" />
+      <recent name="cn.budingcc.gateway.filter" />
+      <recent name="cn.budingcc.auth.web.util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-govern-gateway\src\main\java\cn\budingcc\gateway" />
       <recent name="C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-govern-gateway\src\main\resources" />
       <recent name="C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-service-ucenter-auth\src\main\resources" />
       <recent name="C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-service-shop\src\main\resources" />
       <recent name="C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-service-es\src\main\resources" />
-      <recent name="C:\Users\x5322\Desktop\study\project\over\springboot\buding\buding-service-word" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.budingcc.auth.web.util" />
-      <recent name="cn.budingcc.shop.interceptor" />
-      <recent name="cn.budingcc.auth.web.filter" />
-      <recent name="cn.budingcc.ucenter.domain.response" />
-      <recent name="cn.budingcc.ucenter.exception" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="cn.budingcc.auth.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -520,35 +615,44 @@
     </option>
     <option name="contentProportion" value="0.25068307" />
   </component>
-  <component name="RunManager" selected="JUnit.SpringTest.test">
-    <configuration name="PermissionTest.selectRolesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="buding-service-ucenter" />
+  <component name="RunManager" selected="Application.AopTest">
+    <configuration name="AopTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aop.AopTest" />
+      <module name="buding-auth-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.budingcc.ucenter.service.impl.*" />
+          <option name="PATTERN" value="aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.budingcc.ucenter.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="cn.budingcc.ucenter.service.impl.PermissionTest" />
-      <option name="METHOD_NAME" value="selectRolesTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="buding-service-ucenter" />
+    <configuration name="AuthWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="buding-auth-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.ikarosx.spring.*" />
+          <option name="PATTERN" value="cn.budingcc.auth.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="cn.ikarosx.spring" />
-      <option name="MAIN_CLASS_NAME" value="cn.ikarosx.spring.SpringTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.budingcc.auth.web.AuthWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BudingAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="buding-service-ucenter-auth" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.budingcc.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.budingcc.auth.BudingAuthApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -562,20 +666,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.budingcc.shop.BudingShopApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BudingUcenterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="buding-service-ucenter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.budingcc.ucenter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.budingcc.ucenter.BudingUcenterApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -620,21 +710,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PermissionTest.selectRolesTest" />
-      <item itemvalue="JUnit.SpringTest.test" />
       <item itemvalue="Spring Boot.GovernCenterApplication" />
       <item itemvalue="Spring Boot.ESApplication" />
       <item itemvalue="Spring Boot.GateWayApplication" />
-      <item itemvalue="Spring Boot.BudingUcenterApplication" />
       <item itemvalue="Spring Boot.BudingShopApplication" />
+      <item itemvalue="Spring Boot.BudingAuthApplication" />
+      <item itemvalue="Spring Boot.AuthWebApplication" />
+      <item itemvalue="Application.AopTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpringTest.test" />
+        <item itemvalue="Application.AopTest" />
+        <item itemvalue="Spring Boot.BudingAuthApplication" />
         <item itemvalue="Spring Boot.BudingShopApplication" />
-        <item itemvalue="Spring Boot.BudingUcenterApplication" />
         <item itemvalue="Spring Boot.GateWayApplication" />
-        <item itemvalue="JUnit.PermissionTest.selectRolesTest" />
+        <item itemvalue="Spring Boot.AuthWebApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -711,7 +801,14 @@
       <workItem from="1586854652709" duration="3000" />
       <workItem from="1588210744185" duration="1499000" />
       <workItem from="1588832103879" duration="641000" />
-      <workItem from="1588833270299" duration="564000" />
+      <workItem from="1588833270299" duration="8060000" />
+      <workItem from="1589102724382" duration="197000" />
+      <workItem from="1589172222699" duration="52000" />
+      <workItem from="1589172504235" duration="167000" />
+      <workItem from="1590408560358" duration="4682000" />
+      <workItem from="1591455086965" duration="2833000" />
+      <workItem from="1591491832238" duration="38590000" />
+      <workItem from="1591606051054" duration="2205000" />
     </task>
     <task id="LOCAL-00001" summary="session version init.">
       <created>1585095591000</created>
@@ -784,7 +881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="851685000" />
+    <option name="totallyTimeSpent" value="907907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -796,10 +893,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="324" y="220" width="680" height="544" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.2926045" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.26742628" />
       <window_info id="Structure" order="1" sideWeight="0.50111854" side_tool="true" weight="0.23659517" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -808,24 +905,24 @@
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40029326" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.34750733" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.34750733" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329429" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329429" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.1744868" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20087977" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.31231672" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.329429" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49932975" weight="0.32991204" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49798927" weight="0.33870968" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49731904" weight="0.40615836" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49731904" weight="0.35337242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.20576407" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.06430868" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.13941018" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.18498659" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -861,16 +958,6 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/buding-govern-center/src/main/java/cn/budingcc/govern/center/GovernCenterApplication.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="bdUser" />
@@ -882,126 +969,240 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.2.RELEASE/spring-core-5.2.2.RELEASE-sources.jar!/org/springframework/core/env/AbstractEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7938">
-          <caret line="417" selection-start-line="417" selection-end-line="417" />
-          <folding>
-            <element signature="e#5387#5388#0" expanded="true" />
-            <element signature="e#5440#5441#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-api/src/main/java/cn/budingcc/api/config/Swagger2Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Program Files/Java/jdk1.8.0_192/src.zip!/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/request/RequestData.java">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/domain/response/LoginResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/service/impl/GoodServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/exception/AuthExceptionEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1617">
-          <caret line="98" column="49" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
+        <state relative-caret-position="168">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/exception/AuthExceptionEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="162">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/service/impl/SchoolServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/util/CookieUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-parent/pom.xml">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3002">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        <state relative-caret-position="-420">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/controller/impl/SchoolController.java">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="-399">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/java/cn/budingcc/ucenter/controller/impl/UserController.java">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/domain/TokenInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="123">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.2.1.RELEASE/spring-security-config-5.2.1.RELEASE-sources.jar!/org/springframework/security/config/annotation/authentication/builders/AuthenticationManagerBuilder.java">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/TokenService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="183" column="103" selection-start-line="183" selection-start-column="103" selection-end-line="183" selection-end-column="103" />
+        <state relative-caret-position="161">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="131">
+          <caret line="196" selection-start-line="196" selection-end-line="196" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.2.1.RELEASE/spring-security-web-5.2.1.RELEASE-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/TokenService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="131">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/ClientDetailsService.java">
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/GateWayApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/BudingShopApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="143">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/RabbitConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="131">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/interceptor/FeignInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/controller/GoodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/controller/FollowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="39" selection-start-line="39" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/config/annotation/web/configuration/ResourceServerConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/PermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-api/src/main/java/cn/budingcc/api/shop/CategoryControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/java/cn/budingcc/shop/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-shop/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/config/GateWayWebSecurityExpressionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/config/GatewaySecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/impl/PermissionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/service/impl/TokenServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1-sources.jar!/com/netflix/zuul/ZuulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CorsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-govern-gateway/src/main/java/cn/budingcc/gateway/filter/CookieTokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE-sources.jar!/org/springframework/security/core/userdetails/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/CustomerAccessTokenConverter.java" />
     <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/service/UserDetailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+        <state relative-caret-position="336">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1012,228 +1213,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/filter/CookieTokenFilter.java">
+    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        <state relative-caret-position="651">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/pom.xml">
+    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/client/UserClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        <state relative-caret-position="210">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUser.java">
+    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/JWTTokenEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/AuthorizationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="231">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        <state relative-caret-position="777">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE-sources.jar!/org/springframework/security/core/userdetails/User.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.2.1.RELEASE/spring-security-core-5.2.1.RELEASE-sources.jar!/org/springframework/security/core/userdetails/UserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/ucenter/extension/BdUserExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/ucenter/BdMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="420">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/config/OAuth2LogoutSuccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/QueryResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/ResponseResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/CommonCodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/QueryResponseResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/exception/ExceptionCatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/model/response/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/exception/CustomException.java">
+    <entry file="file://$PROJECT_DIR$/buding-service-ucenter-auth/src/main/java/cn/budingcc/auth/domain/BdUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="315">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-common/src/main/java/cn/budingcc/framework/exception/ExceptionCast.java">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/service/impl/TokenServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/stereotype/Indexed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/stereotype/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/stereotype/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/controller/impl/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-273">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/main/java/cn/budingcc/auth/web/AuthWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.2.RELEASE/spring-context-5.2.2.RELEASE-sources.jar!/org/springframework/context/annotation/ComponentScan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.2.RELEASE/spring-boot-autoconfigure-2.2.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/conf/ComponetImport.java">
+    <entry file="file://$PROJECT_DIR$/buding-auth-web/src/test/java/aop/AopTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/ucenter/BdRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/test/java/cn/ikarosx/spring/SpringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-ucenter/src/main/resources/beans.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/service/FileSystemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/service/impl/FileSystemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/filesystem/response/UploadFileResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-framework-model/src/main/java/cn/budingcc/framework/domain/filesystem/FileSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/dao/FileSystemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/util/FileDfsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buding-service-filesystem/src/main/java/cn/budingcc/filesystem/controller/FileSystemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1287,6 +1390,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
+          <last-edited>Spring|buding-service-ucenter-auth</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
