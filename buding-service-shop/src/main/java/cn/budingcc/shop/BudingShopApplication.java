@@ -18,7 +18,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"cn.budingcc.api"})
 @ComponentScan(basePackages = {"cn.budingcc.framework"})
 @ComponentScan(basePackages = {"cn.budingcc.shop"})
-// @EnableResourceServer
 public class BudingShopApplication {
     public static void main(String[] args) {
         SpringApplication.run(BudingShopApplication.class, args);

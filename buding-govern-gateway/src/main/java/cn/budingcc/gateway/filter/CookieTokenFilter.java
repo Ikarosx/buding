@@ -103,7 +103,7 @@ public class CookieTokenFilter extends ZuulFilter {
         ResponseResult responseResult = new ResponseResult(AuthExceptionEnum.LOGIN_RETRY);
         String s = JSON.toJSONString(responseResult);
         HttpServletResponse response = currentContext.getResponse();
-        response.setContentType("application/json");
+        response.setContentType("application/json;charset=utf-8");
         currentContext.setResponseBody(s);
     }
     
@@ -112,6 +112,9 @@ public class CookieTokenFilter extends ZuulFilter {
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
         Cookie[] cookies = request.getCookies();
+        if (cookies == null) {
+            return "";
+        }
         for (Cookie cookie : cookies) {
             if (StringUtils.equals(cookieName, cookie.getName())) {
                 result = cookie.getValue();
