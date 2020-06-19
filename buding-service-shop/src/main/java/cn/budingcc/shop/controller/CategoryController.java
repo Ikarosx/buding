@@ -7,10 +7,12 @@ import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.ResponseResult;
 import cn.budingcc.shop.service.CategoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.regex.Pattern;
 
@@ -20,6 +22,7 @@ import java.util.regex.Pattern;
  */
 @RestController
 @RequestMapping("category")
+@Slf4j
 public class CategoryController implements CategoryControllerApi {
     
     @Autowired
@@ -28,6 +31,8 @@ public class CategoryController implements CategoryControllerApi {
     @Override
     @PostMapping
     public ResponseResult insertCategory(@RequestBody Category category) {
+         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+         requestAttributes.getRequest().getSession();
         categoryInsertValidate(category);
         return categoryService.insertCategory(category);
     }

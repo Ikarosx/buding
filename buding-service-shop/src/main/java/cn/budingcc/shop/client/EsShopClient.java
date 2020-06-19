@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author Ikaros
  * @date 2020/2/28 12:47
  */
-@FeignClient(value = BuDingServiceEnum.BD_SERVICE_ES)
+@FeignClient(value = BuDingServiceEnum.BD_SERVICE_ES, fallback = EsShopServiceFallback.class)
 public interface EsShopClient {
     @DeleteMapping("es/good/{id}")
     ResponseResult deleteGood(@PathVariable String id);

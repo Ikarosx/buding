@@ -6,6 +6,7 @@ import cn.budingcc.framework.domain.ucenter.extension.BdUserRoleExtension;
 import cn.budingcc.framework.domain.ucenter.request.UserListRequest;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.ResponseResult;
+import cn.budingcc.framework.model.response.SingleResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -20,6 +21,9 @@ public interface UserControllerApi {
     
     @ApiOperation("根据用户名查询用户")
     BdUser getUserByUserName(String name);
+    
+    @ApiOperation("根据学生ID查询用户")
+    SingleResponseResult getUserByStudentId(String studentId);
     
     @ApiOperation("查询用户列表")
     QueryResponseResult listUsersByPage(int page, int size, UserListRequest userListRequest);

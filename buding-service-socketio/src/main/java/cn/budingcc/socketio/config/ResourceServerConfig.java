@@ -1,4 +1,4 @@
-package cn.budingcc.shop.config;
+package cn.budingcc.socketio.config;
 
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -15,7 +15,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.resourceId("shopService");
+        resources.resourceId("socketIo");
     }
     
     // @Override

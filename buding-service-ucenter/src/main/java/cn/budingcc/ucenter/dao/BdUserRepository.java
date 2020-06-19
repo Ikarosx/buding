@@ -11,4 +11,6 @@ public interface BdUserRepository extends JpaRepository<BdUser, String> {
 
     
     BdUser findByUserName(String userName);
+    
+    BdUser findByStudentId(String studentId);
 }

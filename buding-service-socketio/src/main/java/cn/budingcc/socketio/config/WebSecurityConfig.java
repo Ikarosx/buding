@@ -1,4 +1,4 @@
-package cn.budingcc.shop.config;
+package cn.budingcc.socketio.config;
 
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;

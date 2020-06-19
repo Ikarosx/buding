@@ -16,6 +16,7 @@ import cn.budingcc.ucenter.dao.BdMenuRepository;
 import cn.budingcc.ucenter.dao.BdUserMapper;
 import cn.budingcc.ucenter.dao.BdUserRepository;
 import cn.budingcc.ucenter.dao.BdUserRoleRepository;
+import cn.budingcc.ucenter.domain.SimpleUser;
 import cn.budingcc.ucenter.service.UserService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -119,6 +120,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public BdUser getUserByUserName(String name) {
         return bdUserRepository.findByUserName(name);
+    }
+    
+    @Override
+    public SimpleUser getUserByStudentId(String studentId) {
+        BdUser bdUser = bdUserRepository.findByStudentId(studentId);
+        SimpleUser simpleUser = new SimpleUser();
+        BeanUtils.copyProperties(bdUser, simpleUser);
+        return simpleUser;
     }
     
     private BdUser findByUserId(String userId) {

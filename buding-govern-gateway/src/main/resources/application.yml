@@ -19,6 +19,31 @@ eureka:
     client:
         service-url:
             defaultZone: http://budingcc.cn:50000/eureka
+#hystrix:
+#    command:
+#        default:  #default全局有效，service id指定应用有效
+#            execution:
+#                timeout:
+#                    #如果enabled设置为false，则请求超时交给ribbon控制,为true,则超时作为熔断根据
+#                    enabled: true
+#                isolation:
+#                    thread:
+#                        timeoutInMilliseconds: 10000 #断路器超时时间，默认1000ms
+ribbon:
+    MaxAutoRetries: 1 #最大重试次数，当Eureka中可以找到服务，但是服务连不上时将会重试
+    MaxAutoRetriesNextServer: 1 #切换实例的重试次数
+    OkToRetryOnAllOperations: false #对所有操作请求都进行重试，如果是get则可以，如果是post，put等操作没有实现幂等的情况下是很危险的,所以设置为false
+    ConnectTimeout: 2000 #请求连接的超时时间
+    ReadTimeout: 4000 #请求处理的超时时间
+    restclient:
+        enabled: true
+#hystrix:
+#    command:
+#        default:
+#            execution:
+#                isolation:
+#                    thread:
+#                        timeoutInMillisecond: 6000 # 熔断超时时长：6000ms
 zuul:
     # prefix是不会带上去微服务的
     prefix: /api
@@ -27,7 +52,7 @@ zuul:
         enabled: true
         repository: redis
         default-policy-list:
-         - limit: 3
+         - limit: 300
            refresh-interval: 3
            quot: 3
            type:
@@ -57,6 +82,7 @@ zuul:
             path: /cms/**
             serviceId: buding-service-cms
             strip-prefix: false
+    retryable: true
 # key uri
 security:
     oauth2:
@@ -66,6 +92,6 @@ security:
         resource:
             jwt:
                 key-uri: http://oauth.budingcc.cn:40000/oauth/token_key
-logging:
-    pattern:
-        console:
+feign:
+    hystrix:
+        enabled: true

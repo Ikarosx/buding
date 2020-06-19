@@ -2,16 +2,14 @@ package cn.budingcc.socketio.config;
 
 import com.corundumstudio.socketio.SocketConfig;
 import com.corundumstudio.socketio.SocketIOServer;
+import com.corundumstudio.socketio.annotation.SpringAnnotationScanner;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author Ikaros
- * @date 2020/3/4 9:30
- */
 @Configuration
 public class SocketIOConfig {
+    
     @Value("${socketio.host}")
     private String host;
     
@@ -36,6 +34,11 @@ public class SocketIOConfig {
     @Value("${socketio.pingInterval}")
     private int pingInterval;
     
+    /**
+     * 以下配置在上面的application.properties中已经注明
+     *
+     * @return
+     */
     @Bean
     public SocketIOServer socketIOServer() {
         SocketConfig socketConfig = new SocketConfig();
@@ -52,5 +55,11 @@ public class SocketIOConfig {
         config.setPingTimeout(pingTimeout);
         config.setPingInterval(pingInterval);
         return new SocketIOServer(config);
+    }
+    
+    
+    @Bean
+    public SpringAnnotationScanner springAnnotationScanner(SocketIOServer socketServer) {
+        return new SpringAnnotationScanner(socketServer);
     }
 }

@@ -7,7 +7,7 @@ spring:
         name: buding-service-es
 buding:
     elasticsearch:
-        hostlist: es.budingcc.cn:9200
+        hostlist: 127.0.0.1:9200
 eureka:
     client:
         service-url:

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2020/3/4 9:29
  */
 @SpringBootApplication
-@EntityScan("cn.budingcc.framework.domain")
+@EntityScan("cn.budingcc.socketio.domain")
 @ComponentScan(basePackages = "cn.budingcc.framework")
 @ComponentScan(basePackages = "cn.budingcc.socketio")
 public class SocketIOApplication {

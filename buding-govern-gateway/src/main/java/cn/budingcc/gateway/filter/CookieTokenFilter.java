@@ -11,6 +11,7 @@ import com.netflix.zuul.exception.ZuulException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2020/3/25 9:14
  */
 @Component
+@Order(value = 2)
 @Slf4j
 public class CookieTokenFilter extends ZuulFilter {
     

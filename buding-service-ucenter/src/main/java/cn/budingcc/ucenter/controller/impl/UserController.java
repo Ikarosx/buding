@@ -8,7 +8,9 @@ import cn.budingcc.framework.exception.ExceptionCast;
 import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.ResponseResult;
+import cn.budingcc.framework.model.response.SingleResponseResult;
 import cn.budingcc.ucenter.controller.UserControllerApi;
+import cn.budingcc.ucenter.domain.SimpleUser;
 import cn.budingcc.ucenter.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,13 @@ public class UserController implements UserControllerApi {
     @GetMapping("/user")
     public BdUser getUserByUserName(@RequestParam @NotBlank String name) {
         return userService.getUserByUserName(name);
+    }
+    
+    @Override
+    @GetMapping("/user/simple/{studentId}")
+    public SingleResponseResult getUserByStudentId(@PathVariable String studentId) {
+        SimpleUser userByStudentId = userService.getUserByStudentId(studentId);
+        return new SingleResponseResult<>(CommonCodeEnum.SUCCESS, userByStudentId);
     }
     
     @Override
@@ -77,7 +86,7 @@ public class UserController implements UserControllerApi {
     
     @Override
     @PutMapping("user/{userId}")
-    public ResponseResult updateUser(@RequestBody BdUserRoleExtension bdUser,@PathVariable String userId) {
+    public ResponseResult updateUser(@RequestBody BdUserRoleExtension bdUser, @PathVariable String userId) {
         String nickName = bdUser.getNickName();
         String nickNameRegex = "[0-9a-zA-Z\u4e00-\u9fa5]{1,10}";
         if (!StringUtils.isEmpty(nickName) && !Pattern.matches(nickNameRegex, nickName)) {
