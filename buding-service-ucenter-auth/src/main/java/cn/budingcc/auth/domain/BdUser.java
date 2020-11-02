@@ -15,7 +15,7 @@ public class BdUser extends User {
     private String id;
     
     private String studentId;
-    private String userName;
+    private String username;
     private String schoolId;
     private String nickName;
     private String userPic;

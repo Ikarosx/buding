@@ -19,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
  * @date 2020/2/20 13:59
  */
 @RestController
-@RequestMapping("filesystem")
+@RequestMapping("filesystemss")
 public class FileSystemController implements FileSystemControllerApi {
     @Autowired
     FileSystemService fileSystemService;

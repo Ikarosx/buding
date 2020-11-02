@@ -4,8 +4,7 @@ import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.ResponseResult;
 import cn.budingcc.framework.model.response.ResultCode;
 import com.google.common.collect.ImmutableMap;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @ControllerAdvice
+@Slf4j
 public class ExceptionCatch {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionCatch.class);
     
     /**
      * 使用EXCEPTIONS存放异常类型和错误代码的映射，
@@ -41,7 +40,7 @@ public class ExceptionCatch {
     @ExceptionHandler(CustomException.class)
     @ResponseBody
     public ResponseResult customException(CustomException e) {
-        LOGGER.error("catch exception : {}", e.getMessage());
+        log.error("catch exception : {}", e.getMessage());
         ResultCode resultCode = e.getResultCode();
         return new ResponseResult(resultCode);
     }
@@ -50,7 +49,7 @@ public class ExceptionCatch {
     @ResponseBody
     public ResponseResult exception(Exception exception) {
         // 记录日志
-        LOGGER.error("catch exception:{}", exception.getClass() + "------" + exception.getMessage());
+        log.error("catch exception:{}", exception.getClass() + "------" + exception.getMessage());
         if (EXCEPTIONS == null) {
             EXCEPTIONS = builder.build();
         }

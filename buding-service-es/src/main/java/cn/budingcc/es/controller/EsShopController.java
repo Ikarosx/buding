@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 /**
  * @author Ikaros
  * @date 2020/2/23 21:07
@@ -36,12 +38,22 @@ public class EsShopController implements EsShopControllerApi {
     @Override
     @DeleteMapping("good/{id}")
     public ResponseResult deleteGood(@PathVariable String id) {
-        return esShopService.deleteGood(id);
+        try {
+            return esShopService.deleteGood(id);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseResult.fail();
+        }
     }
     
     @Override
     @DeleteMapping("good/list/{ids}")
     public ResponseResult deleteGoods(@PathVariable String ids) {
-        return esShopService.deleteGoods(ids);
+        try {
+            return esShopService.deleteGoods(ids);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseResult.fail();
+        }
     }
 }

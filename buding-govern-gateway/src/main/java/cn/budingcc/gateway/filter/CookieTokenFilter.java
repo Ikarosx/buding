@@ -1,10 +1,7 @@
 package cn.budingcc.gateway.filter;
 
-import cn.budingcc.framework.model.response.ResponseResult;
 import cn.budingcc.gateway.domain.TokenInfo;
-import cn.budingcc.gateway.exception.AuthExceptionEnum;
 import cn.budingcc.gateway.service.TokenService;
-import com.alibaba.fastjson.JSON;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -99,14 +96,15 @@ public class CookieTokenFilter extends ZuulFilter {
     }
     
     public void relogin() {
-        RequestContext currentContext = RequestContext.getCurrentContext();
+        // 取消Relogin
+        /*RequestContext currentContext = RequestContext.getCurrentContext();
         currentContext.setResponseStatusCode(200);
         currentContext.setSendZuulResponse(false);
         ResponseResult responseResult = new ResponseResult(AuthExceptionEnum.LOGIN_RETRY);
         String s = JSON.toJSONString(responseResult);
         HttpServletResponse response = currentContext.getResponse();
         response.setContentType("application/json;charset=utf-8");
-        currentContext.setResponseBody(s);
+        currentContext.setResponseBody(s);*/
     }
     
     private String getCookie(String cookieName) {

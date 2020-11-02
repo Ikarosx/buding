@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiOperation;
 @Api("用户中心接口")
 public interface UserControllerApi {
     @ApiOperation("查询用户额外信息")
-    BdUserExtension getUserExtension(String userName);
+    BdUserExtension getUserExtension(String username);
     
     @ApiOperation("根据用户名查询用户")
     BdUser getUserByUserName(String name);

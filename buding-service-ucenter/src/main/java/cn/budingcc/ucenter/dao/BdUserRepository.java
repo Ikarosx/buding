@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface BdUserRepository extends JpaRepository<BdUser, String> {
 
     
-    BdUser findByUserName(String userName);
+    BdUser findByUsername(String username);
     
     BdUser findByStudentId(String studentId);
 }

@@ -11,5 +11,5 @@ import lombok.ToString;
 @ToString
 public class Message {
     String content;
-    String userName;
+    String username;
 }

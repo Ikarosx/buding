@@ -22,6 +22,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,6 +44,9 @@ public class UserServiceImpl implements UserService {
     private BdUserRoleRepository bdUserRoleRepository;
     @Autowired
     private BdMenuRepository bdMenuRepository;
+    
+    @Autowired
+    private PasswordEncoder passwordEncoder;
     
     @Override
     public BdUserExtension getUserExtension(String username) {
@@ -73,6 +77,7 @@ public class UserServiceImpl implements UserService {
     public ResponseResult insertUser(BdUserRoleExtension bdUser) {
         BdUser user = new BdUser();
         BeanUtils.copyProperties(bdUser, user);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         BdUser save = bdUserRepository.save(user);
         List<BdRole> bdRoleList = bdUser.getBdRoleList();
         for (BdRole bdRole : bdRoleList) {
@@ -119,7 +124,7 @@ public class UserServiceImpl implements UserService {
     
     @Override
     public BdUser getUserByUserName(String name) {
-        return bdUserRepository.findByUserName(name);
+        return bdUserRepository.findByUsername(name);
     }
     
     @Override

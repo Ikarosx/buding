@@ -6,6 +6,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Random;
 
 /**
  * @author Ikaros
@@ -18,6 +19,7 @@ public class PermissionServiceImpl implements PermissionService {
     public boolean hasPermission(HttpServletRequest request, Authentication authentication) {
         log.info(request.getRequestURI());
         log.info(String.valueOf(authentication));
-        return true;
+        Random random = new Random();
+        return (random.nextInt() & 1) == 0;
     }
 }

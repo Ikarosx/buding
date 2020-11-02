@@ -24,7 +24,7 @@ public class Good implements Serializable {
     @GeneratedValue(generator = "jpa-uuid")
     @Column(length = 32)
     private String id;
-    private String userName;
+    private String username;
     private String goodName;
     private String description;
     private String imageUrl;

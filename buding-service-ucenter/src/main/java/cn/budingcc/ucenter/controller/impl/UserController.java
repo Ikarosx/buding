@@ -109,9 +109,9 @@ public class UserController implements UserControllerApi {
         if (StringUtils.isEmpty(studentId) || !Pattern.matches(studentIdRegex, studentId)) {
             ExceptionCast.cast(CommonCodeEnum.INVALID_PARAM);
         }
-        String userName = bdUser.getUserName();
-        String userNameRegex = "[a-zA-Z\u4e00-\u9fa5]{1,10}";
-        if (StringUtils.isEmpty(userName) || !Pattern.matches(userNameRegex, userName)) {
+        String username = bdUser.getUsername();
+        String usernameRegex = "[a-zA-Z\u4e00-\u9fa5]{1,10}";
+        if (StringUtils.isEmpty(username) || !Pattern.matches(usernameRegex, username)) {
             ExceptionCast.cast(CommonCodeEnum.INVALID_PARAM);
         }
         String nickName = bdUser.getNickName();

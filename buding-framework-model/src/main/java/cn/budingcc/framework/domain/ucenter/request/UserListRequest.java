@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 public class UserListRequest extends RequestData {
     private String studentId;
-    private String userName;
+    private String username;
     private Integer sex;
     private Integer roleId;
     private Integer state;

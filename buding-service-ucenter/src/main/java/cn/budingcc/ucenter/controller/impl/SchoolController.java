@@ -67,27 +67,27 @@ public class SchoolController implements SchoolControllerApi {
     }
     
     @Override
-    @GetMapping("system/list")
+    @GetMapping("/school/system/list")
     public QueryResponseResult listSchoolSystems() {
         return schoolService.listSchoolSystems();
     }
     
     @Override
-    @PostMapping("system")
+    @PostMapping("/school/system")
     public ResponseResult insertSchoolSystem(@RequestBody BdSchoolSystem schoolSystem) {
         schoolSystemValidate(schoolSystem);
         return schoolService.insertSchoolSystem(schoolSystem);
     }
     
     @Override
-    @PutMapping("system/{schoolSystemId}")
+    @PutMapping("/school/system/{schoolSystemId}")
     public ResponseResult updateSchoolSystem(@RequestBody BdSchoolSystem schoolSystem, @PathVariable String schoolSystemId) {
         schoolSystemValidate(schoolSystem);
         return schoolService.updateSchoolSystem(schoolSystem, schoolSystemId);
     }
     
     @Override
-    @DeleteMapping("system/{schoolSystemId}")
+    @DeleteMapping("/school/system/{schoolSystemId}")
     public ResponseResult deleteSchoolSystem(@PathVariable String schoolSystemId) {
         return schoolService.deleteSchoolSystem(schoolSystemId);
     }

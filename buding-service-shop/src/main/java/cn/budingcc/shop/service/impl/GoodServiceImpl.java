@@ -42,6 +42,7 @@ public class GoodServiceImpl implements GoodService {
         good.setBrowseCount(0L);
         good.setCreateTime(new Date());
         good.setUpdateTime(good.getCreateTime());
+        
         Good save = goodRepository.save(good);
         rabbitTemplate.convertAndSend(RabbitConfig.BD_THYMELEAF_EXCHANGE, RabbitConfig.BD_THYMELEAF_GOOD_INSERT_ROUTING_KEY, SerializationUtils.serialize(save));
         return new ResponseResult(CommonCodeEnum.SUCCESS);

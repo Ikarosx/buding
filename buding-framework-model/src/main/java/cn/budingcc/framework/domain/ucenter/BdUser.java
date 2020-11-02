@@ -25,7 +25,7 @@ public class BdUser {
     private String id;
     
     private String studentId;
-    private String userName;
+    private String username;
     private String password;
     private String salt;
     private String schoolId;

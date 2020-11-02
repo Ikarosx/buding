@@ -39,7 +39,7 @@ public class FreemarkerTest {
             put("description", "我老婆");
             put("goodName", "伊卡洛斯");
             put("price", "666.0");
-            put("userName", "Ikaros");
+            put("username", "Ikaros");
             put("imageUrl", "group1/M00/00/00/dU4Lkl5ZF-OAago3AAQeOvTYbxw364.png,group1/M00/00/00/dU4Lkl5ZF-2AC6xNAASTMaEo31I669.png");
         }};
         GridFSFile gridFSFile = gridFsTemplate.findOne(new Query().addCriteria(GridFsCriteria.where("_id").is("5e5bb3387908c365f15fab19")));

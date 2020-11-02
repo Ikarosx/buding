@@ -19,8 +19,8 @@ public interface BdUserMapper {
             "<when test='userListRequest.studentId!=null'>" +
             "AND student_id LIKE '%${userListRequest.studentId}%' " +
             "</when>" +
-            "<when test='userListRequest.userName!=null'>" +
-            "AND user_name LIKE '%${userListRequest.userName}%' " +
+            "<when test='userListRequest.username!=null'>" +
+            "AND username LIKE '%${userListRequest.username}%' " +
             "</when>" +
             "<when test='userListRequest.sex!=null'>" +
             "AND sex=#{userListRequest.sex} " +
@@ -36,7 +36,7 @@ public interface BdUserMapper {
             @Result(property = "userPic", column = "user_pic"),
             @Result(property = "nickName", column = "nick_name"),
             @Result(property = "studentId", column = "student_id"),
-            @Result(property = "userName", column = "user_name"),
+            @Result(property = "username", column = "username"),
             @Result(property = "schoolName", column = "school_name"),
             @Result(property = "schoolId", column = "school_id"),
             @Result(property = "id", column = "id"),

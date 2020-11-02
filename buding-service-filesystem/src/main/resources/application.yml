@@ -1,5 +1,5 @@
 server:
-    port: 30000
+    port: 33000
 spring:
     application:
         name: buding-service-filesystem
@@ -35,13 +35,5 @@ eureka:
         fetch-registry: true
         service-url:
             defaultZone: http://budingcc.cn:50000/eureka/
-fdfs:
-    # 链接超时
-    connect-timeout: 6000
-    # 读取时间
-    so-timeout: 6000
-    # 生成缩略图参数
-    thumb-image:
-        width: 150
-        height: 150
-    tracker-list: fs.budingcc.cn:22122
+
+fdfsUrl: http://fdfs.ikarosx.cn

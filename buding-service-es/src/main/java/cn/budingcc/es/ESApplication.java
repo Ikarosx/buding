@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 /**
  * @author Ikaros
@@ -18,7 +17,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 @ComponentScan(basePackages = "cn.budingcc.api")
 @ComponentScan(basePackages = "cn.budingcc.es")
 @ComponentScan(basePackages = "cn.budingcc.framework")
-@EnableElasticsearchRepositories(basePackages = "cn.budingcc.es.dao")
+// @EnableElasticsearchRepositories(basePackages = "cn.budingcc.es.dao")
 // @EnableResourceServer
 // @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ESApplication {

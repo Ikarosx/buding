@@ -13,7 +13,7 @@ import cn.budingcc.ucenter.domain.SimpleUser;
  * @date 2020/1/30 19:49
  */
 public interface UserService {
-    BdUserExtension getUserExtension(String userName);
+    BdUserExtension getUserExtension(String username);
     
     QueryResponseResult listUsersByPage(int page, int size, UserListRequest userListRequest);
     
