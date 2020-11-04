@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("good")
 public class GoodController implements GoodControllerApi {
     @Autowired
-    GoodService goodService;
- 
+    private GoodService goodService;
+    
     
     @Override
     @PostMapping

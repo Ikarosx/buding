@@ -16,6 +16,8 @@ public enum CommonCodeEnum implements ResultCode {
     JSON_PARSE_ERROR0(false, 10003,"json解析失败"),
     FILE_SIZE_LIMIT_EXCEEDED(false, 10004, "上传文件过大"),
     IO_EXCEPTION(false, 10005, "IO异常"),
+    AUTH_FAIL(false, 10006, "认证异常"),
+    ACCESS_DENIED(false, 10007, "拒绝访问"),
     FAIL(false, 11111, "操作失败！"),
     SERVER_ERROR(false, 99999, "系统繁忙，请稍后重试！");
     

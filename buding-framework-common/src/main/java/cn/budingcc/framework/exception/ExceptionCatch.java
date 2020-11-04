@@ -50,6 +50,7 @@ public class ExceptionCatch {
     public ResponseResult exception(Exception exception) {
         // 记录日志
         log.error("catch exception:{}", exception.getClass() + "------" + exception.getMessage());
+        exception.printStackTrace();
         if (EXCEPTIONS == null) {
             EXCEPTIONS = builder.build();
         }

@@ -6,6 +6,7 @@ import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.QueryResult;
 import cn.budingcc.framework.model.response.ResponseResult;
+import cn.budingcc.framework.util.SecurityUtils;
 import cn.budingcc.shop.client.EsShopClient;
 import cn.budingcc.shop.config.RabbitConfig;
 import cn.budingcc.shop.dao.GoodRepository;
@@ -42,7 +43,9 @@ public class GoodServiceImpl implements GoodService {
         good.setBrowseCount(0L);
         good.setCreateTime(new Date());
         good.setUpdateTime(good.getCreateTime());
-        
+        good.setUsername(SecurityUtils.getUsernameFromAuth());
+        good.setUserId(SecurityUtils.getIdFromAuth());
+        good.setState(1);
         Good save = goodRepository.save(good);
         rabbitTemplate.convertAndSend(RabbitConfig.BD_THYMELEAF_EXCHANGE, RabbitConfig.BD_THYMELEAF_GOOD_INSERT_ROUTING_KEY, SerializationUtils.serialize(save));
         return new ResponseResult(CommonCodeEnum.SUCCESS);

@@ -64,6 +64,8 @@ public class UserDetailServiceImpl implements UserDetailsService {
         permissions.forEach(item -> userPermission.add(item.getCode()));
         String userPermissionString = StringUtils.join(userPermission.toArray(), ",");
         BdUser bdUser = new BdUser(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList(userPermissionString));
+        bdUser.setId(userExtension.getId());
+        bdUser.setUsername(username);
         bdUser.setNickName(userExtension.getNickName());
         bdUser.setSchoolId(userExtension.getSchoolId());
         bdUser.setStudentId(userExtension.getStudentId());

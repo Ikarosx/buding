@@ -32,7 +32,7 @@ public class GatewaySecurityConfig extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         // TODO 允许了全部
-        http.cors().and().authorizeRequests().antMatchers("/oauth/**").permitAll().antMatchers(HttpMethod.OPTIONS).permitAll().anyRequest().permitAll();
+        http.cors().and().authorizeRequests().antMatchers("/oauth/**").permitAll().antMatchers(HttpMethod.OPTIONS).permitAll().anyRequest().authenticated();
         // .access("#permissionService.hasPermission(request, authentication)");
     }
     
