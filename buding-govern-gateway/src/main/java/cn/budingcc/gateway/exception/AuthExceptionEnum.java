@@ -41,4 +41,5 @@ public enum AuthExceptionEnum implements ResultCode {
     public String message() {
         return message;
     }
+    
 }
