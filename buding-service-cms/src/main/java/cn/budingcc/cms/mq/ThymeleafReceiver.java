@@ -13,6 +13,7 @@ import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.SerializationUtils;
 import org.bson.types.ObjectId;
@@ -27,9 +28,7 @@ import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
@@ -38,21 +37,38 @@ import java.util.Date;
  * @date 2020/3/2 20:36
  */
 @Component
+@Slf4j
 public class ThymeleafReceiver {
     private final String GOOD_DETAIL_SITE_ID;
     private final String GOOD_DATA_URL_PREFIX;
+    private final String PHYSICAL_PATH = "E:\\wamp\\nginx\\www\\buding\\good\\detail";
     @Autowired
-    CmsPageRepository cmsPageRepository;
+    private CmsPageRepository cmsPageRepository;
     @Autowired
-    CmsSiteService cmsSiteService;
+    private CmsSiteService cmsSiteService;
     @Autowired
-    RabbitTemplate rabbitTemplate;
+    private RabbitTemplate rabbitTemplate;
     @Autowired
-    GridFsTemplate gridFsTemplate;
+    private GridFsTemplate gridFsTemplate;
     
     ThymeleafReceiver(@Value("${buding.rabbitmq.goodDetailSiteId}") final String goodDetailSiteId, @Value("${buding.rabbitmq.goodDataUrlPrefix}") final String goodDataUrlPrefix) {
         this.GOOD_DETAIL_SITE_ID = goodDetailSiteId;
         this.GOOD_DATA_URL_PREFIX = goodDataUrlPrefix;
+    }
+    
+    @RabbitListener(queues = "#{bdThymeleafSaveHtmlToNginxQueue.name}")
+    public void saveHtmlToNginxReceive(byte[] bytes) {
+        CmsPage cmsPage = SerializationUtils.deserialize(bytes);
+        log.debug("保存{}到nginx目录", cmsPage.getPageName());
+        String htmlFileId = cmsPage.getHtmlFileId();
+        GridFsResource gridFsResource = getGridFsResourceByGridFsId(htmlFileId);
+        File file = new File(cmsPage.getPagePhysicalPath());
+        try {
+            IOUtils.copy(gridFsResource.getInputStream(), new FileOutputStream(file));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
     }
     
     @RabbitListener(queues = "#{bdThymeleafGoodInsertQueue.name}")
@@ -70,7 +86,7 @@ public class ThymeleafReceiver {
         String dataUrl = GOOD_DATA_URL_PREFIX + "/" + good.getId();
         cmsPage.setDataUrl(dataUrl);
         cmsPage.setPageWebPath("/" + cmsPage.getPageName());
-        cmsPage.setPagePhysicalPath(cmsPage.getPageWebPath());
+        cmsPage.setPagePhysicalPath(PHYSICAL_PATH + cmsPage.getPageWebPath());
         CmsPage cmsPageSaved = cmsPageRepository.save(cmsPage);
         // 通知
         rabbitTemplate.convertAndSend(RabbitConfig.BD_THYMELEAF_EXCHANGE, RabbitConfig.BD_THYMELEAF_SAVE_HTML_TO_NGINX_ROUTING_KEY, SerializationUtils.serialize(cmsPageSaved));
@@ -111,8 +127,7 @@ public class ThymeleafReceiver {
     }
     
     private String getTemplate(String templateFileId) {
-        GridFSFile gridFSFile = gridFsTemplate.findOne(new Query().addCriteria(GridFsCriteria.where("_id").is(templateFileId)));
-        GridFsResource resource = gridFsTemplate.getResource(gridFSFile);
+        GridFsResource resource = getGridFsResourceByGridFsId(templateFileId);
         String content = "";
         try (InputStream inputStream = resource.getInputStream()) {
             content = IOUtils.toString(inputStream, StandardCharsets.UTF_8.name());
@@ -120,5 +135,10 @@ public class ThymeleafReceiver {
             e.printStackTrace();
         }
         return content;
+    }
+    
+    private GridFsResource getGridFsResourceByGridFsId(String templateFileId) {
+        GridFSFile gridFSFile = gridFsTemplate.findOne(new Query().addCriteria(GridFsCriteria.where("_id").is(templateFileId)));
+        return gridFsTemplate.getResource(gridFSFile);
     }
 }
