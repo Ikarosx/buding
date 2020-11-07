@@ -75,7 +75,7 @@ public class EsShopServiceImpl implements EsShopService {
         String directCategoryId = goodSearchParam.getDirectCategoryId();
         if (StringUtils.isNotEmpty(directCategoryId)) {
             // prefixQuery会在分类超过10个的时候出现搜索bug
-            boolQueryBuilder.filter(QueryBuilders.prefixQuery("direct_category_id", directCategoryId));
+            boolQueryBuilder.filter(QueryBuilders.prefixQuery("direct_category_id.keyword", directCategoryId));
         }
         searchSourceBuilder.query(boolQueryBuilder);
         
