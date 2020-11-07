@@ -62,14 +62,14 @@ public class EsShopServiceImpl implements EsShopService {
             // 提升特定字段的boost值
             multiMatchQueryBuilder.field("good_name", 5);
             // 模糊性
-            multiMatchQueryBuilder.fuzziness(1);
+            // multiMatchQueryBuilder.fuzziness(1);
             // 最大模糊扩展数
             multiMatchQueryBuilder.maxExpansions(2);
             boolQueryBuilder.should(multiMatchQueryBuilder);
             // wildcard
-            boolQueryBuilder.should(QueryBuilders.wildcardQuery("good_name", "*" + keyword + "*"));
+            // boolQueryBuilder.should(QueryBuilders.wildcardQuery("good_name", "*" + keyword + "*"));
             // 解决filter和should交集问题
-            boolQueryBuilder.minimumShouldMatch(1);
+            // boolQueryBuilder.minimumShouldMatch(1);
         }
         // 过滤
         String directCategoryId = goodSearchParam.getDirectCategoryId();
