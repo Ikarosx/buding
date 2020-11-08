@@ -50,6 +50,13 @@ public class UserController implements UserControllerApi {
     }
     
     @Override
+    @GetMapping("/user/{id}")
+    public SingleResponseResult getUserByUserId(@PathVariable String id) {
+        SimpleUser simpleUser = userService.getUserById(id);
+        return new SingleResponseResult<>(CommonCodeEnum.SUCCESS, simpleUser);
+    }
+    
+    @Override
     @GetMapping("/user/list/{page}/{size}")
     public QueryResponseResult listUsersByPage(@PathVariable int page, @PathVariable int size, UserListRequest userListRequest) {
         if (page < 0) {

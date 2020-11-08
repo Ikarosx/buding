@@ -2,6 +2,7 @@ package cn.budingcc.shop.service.impl;
 
 import cn.budingcc.framework.domain.shop.Good;
 import cn.budingcc.framework.domain.shop.request.GoodListRequest;
+import cn.budingcc.framework.exception.CustomException;
 import cn.budingcc.framework.model.response.CommonCodeEnum;
 import cn.budingcc.framework.model.response.QueryResponseResult;
 import cn.budingcc.framework.model.response.QueryResult;
@@ -11,6 +12,7 @@ import cn.budingcc.shop.client.EsShopClient;
 import cn.budingcc.shop.config.RabbitConfig;
 import cn.budingcc.shop.dao.GoodRepository;
 import cn.budingcc.shop.service.GoodService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -29,6 +31,7 @@ import java.util.Optional;
  * @date 2020/1/28 13:24
  */
 @Service("GoodService")
+@Slf4j
 public class GoodServiceImpl implements GoodService {
     @Autowired
     GoodRepository goodRepository;
@@ -63,6 +66,11 @@ public class GoodServiceImpl implements GoodService {
     public ResponseResult deleteGood(String goodId) {
         goodRepository.deleteById(goodId);
         ResponseResult responseResult = esShopClient.deleteGood(goodId);
+        if (!responseResult.isSuccess()) {
+            log.debug("ES删除索引失败,{}", responseResult);
+            throw new CustomException(CommonCodeEnum.FAIL);
+        }
+        
         return responseResult;
     }
     

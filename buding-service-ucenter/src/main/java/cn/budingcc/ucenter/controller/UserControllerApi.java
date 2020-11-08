@@ -36,4 +36,7 @@ public interface UserControllerApi {
     
     @ApiOperation("更新用户")
     ResponseResult updateUser(BdUserRoleExtension bdUser, String userId);
+    
+    @ApiOperation("通过用户ID获取简单用户信息")
+    SingleResponseResult getUserByUserId(String id);
 }

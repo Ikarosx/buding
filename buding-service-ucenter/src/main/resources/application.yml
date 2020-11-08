@@ -33,6 +33,18 @@ eureka:
         prefer-ip-address: true
         ip-address: budingcc.cn
         instance-id: ${spring.application.name}:${server.port}
+
+
+security:
+    oauth2:
+        client:
+            client-id: ucenterService
+            client-secret: 123456
+        resource:
+            jwt:
+                key-uri: http://oauth.budingcc.cn:40000/oauth/token_key
+
+
 logging:
     level:
         cn:

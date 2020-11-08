@@ -135,8 +135,17 @@ public class UserServiceImpl implements UserService {
         return simpleUser;
     }
     
+    @Override
+    public SimpleUser getUserById(String id) {
+        BdUser bdUser = bdUserRepository.getOne(id);
+        SimpleUser simpleUser = new SimpleUser();
+        BeanUtils.copyProperties(bdUser, simpleUser);
+        return simpleUser;
+    }
+    
     private BdUser findByUserId(String userId) {
         Optional<BdUser> optional = bdUserRepository.findById(userId);
         return optional.orElseGet(null);
     }
+    
 }

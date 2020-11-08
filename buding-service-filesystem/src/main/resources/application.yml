@@ -35,5 +35,13 @@ eureka:
         fetch-registry: true
         service-url:
             defaultZone: http://budingcc.cn:50000/eureka/
+security:
+    oauth2:
+        client:
+            client-id: esService
+            client-secret: 123456
+        resource:
+            jwt:
+                key-uri: http://oauth.budingcc.cn:40000/oauth/token_key
 
 fdfsUrl: http://fdfs.ikarosx.cn

@@ -26,4 +26,6 @@ public interface UserService {
     BdUser getUserByUserName(String name);
     
     SimpleUser getUserByStudentId(String studentId);
+    
+    SimpleUser getUserById(String id);
 }

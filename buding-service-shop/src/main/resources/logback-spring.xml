@@ -41,7 +41,8 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
     <logger name="org.springframework.boot" level="DEBUG"/>
-    <logger name="org.springframework.security" level="DEBUG"/>
+    <logger name="cn.budingcc" level="DEBUG"/>
+<!--    <logger name="org.springframework.security" level="DEBUG"/>-->
     <root level="info">
         <!--<appender-ref ref="ASYNC"/>-->
         <appender-ref ref="FILE"/>
