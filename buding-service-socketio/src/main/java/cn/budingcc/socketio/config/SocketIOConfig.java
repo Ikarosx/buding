@@ -54,6 +54,7 @@ public class SocketIOConfig {
         config.setUpgradeTimeout(upgradeTimeout);
         config.setPingTimeout(pingTimeout);
         config.setPingInterval(pingInterval);
+        config.setOrigin("http://budingcc.cn:13000");
         return new SocketIOServer(config);
     }
     

@@ -4,10 +4,7 @@ import cn.budingcc.socketio.domain.Message;
 import cn.budingcc.socketio.domain.MessageEntity;
 import cn.budingcc.socketio.repository.MessageRepository;
 import com.alibaba.fastjson.JSON;
-import com.corundumstudio.socketio.AckRequest;
-import com.corundumstudio.socketio.SocketIOClient;
-import com.corundumstudio.socketio.SocketIOServer;
-import com.corundumstudio.socketio.VoidAckCallback;
+import com.corundumstudio.socketio.*;
 import com.corundumstudio.socketio.annotation.OnConnect;
 import com.corundumstudio.socketio.annotation.OnDisconnect;
 import com.corundumstudio.socketio.annotation.OnEvent;
@@ -15,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Example;
 import org.springframework.security.jwt.Jwt;
 import org.springframework.security.jwt.JwtHelper;
 import org.springframework.security.jwt.crypto.sign.RsaVerifier;
@@ -37,6 +35,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SocketHandler {
     private final String SEND_MESSAGE = "send_message";
     private final String RECEIVE_MESSAGE = "receive_message";
+    private final String GET_UNREAD = "get_unread";
     
     @Autowired
     private MessageRepository messageRepository;
@@ -66,23 +65,40 @@ public class SocketHandler {
     public void onConnect(SocketIOClient client) {
         List<String> accessToken = client.getHandshakeData().getUrlParams().get("access_token");
         if (accessToken == null || accessToken.size() == 0) {
+            log.debug("accessToken为null，拒绝连接");
             client.disconnect();
             return;
         }
         String authorization = accessToken.get(0);
-        Jwt jwt = null;
-        String claims = null;
+        log.debug(authorization);
+        Jwt jwt;
+        String claims;
         try {
             jwt = JwtHelper.decodeAndVerify(authorization, new RsaVerifier(publicKey));
             claims = jwt.getClaims();
         } catch (Exception e) {
             e.printStackTrace();
+            log.debug("{}不是有效的jwt", authorization);
             client.disconnect();
             return;
         }
         Map map = JSON.parseObject(claims, Map.class);
-        System.out.println(map.get("student_id") + "加入聊天了");
+        log.debug("{}加入聊天了", map.get("student_id"));
         clientMap.put((String) map.get("student_id"), client.getSessionId());
+        // 获取未读信息返回
+        MessageEntity message = new MessageEntity();
+        message.setVisited(false);
+        message.setToUser((String) map.get("student_id"));
+        List<MessageEntity> unreadMessage = messageRepository.findAll(Example.of(message));
+        client.sendEvent(GET_UNREAD, new AckCallback<String>(String.class) {
+            @Override
+            public void onSuccess(String result) {
+                log.debug("{}拉取消息成功", map.get("student_id"));
+                messageRepository.deleteInBatch(unreadMessage);
+            }
+        }, unreadMessage);
+        // HACK 回调函数不生效，这里可能存在前端没有接收到，但已经删除了数据
+        messageRepository.deleteInBatch(unreadMessage);
     }
     
     @OnDisconnect
@@ -128,4 +144,5 @@ public class SocketHandler {
             }
         }, data);
     }
+    
 }
